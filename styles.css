@@ -417,6 +417,8 @@ body {
   right: 0;
   bottom: 9.25em;
   border-radius: 5em;
+  opacity: 0;
+  animation: masukjudul 2s ease 11s forwards;
 }
 .core .titandannando a#scroll-btn:before {
   position: absolute;
