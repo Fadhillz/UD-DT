@@ -1,0 +1,724 @@
+:root {
+  --coklat: #836435;
+  --pth: #f3f1e7;
+  --htm: #232325;
+  --shadow: rgba(0, 0, 0, 0.79);
+}
+html {scroll-behavior: smooth;}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1080px;
+}
+
+
+.aws {
+  position: absolute;
+  background-position: center;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url(assets/sda.jpg);
+  background-size: 21%;
+  z-index: 1;
+  transition: 3s ease 5s;
+}
+
+/* core-section */
+.core {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 100vh;
+  justify-content: center;
+  background-image:url(assets/img/bg1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.core::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-image: linear-gradient(180deg, var(--htm), transparent);
+}
+
+.core .row {
+  z-index: 130;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.core .row #kertas1,
+.core .row #kertas2 {
+  display: flex;
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  z-index: 0;
+  filter: drop-shadow(3px 4px 7px var(--shadow));
+}
+
+.core .row #kertas1 {
+  transition: 1s ease;
+  animation:kermas1 2s ease forwards, wigglek 2s ease-in-out 2.3s infinite alternate;
+}
+
+@keyframes kermas1 {
+  0% {transform: translate(0, -30%); opacity: 0;}
+  100% {transform: translate(0, 1.07%);}
+}
+
+@keyframes kerkel1 {
+  to {transform: translate(0, -100vw); opacity: 0;}
+}
+
+@keyframes wigglek {
+  0%  {transform: translate(0, 1.07%);}
+  50% {transform: translate(0%, 0%);}
+  100%{transform: translate(0, -1.05%);}
+}
+
+@keyframes rotk2 {
+  from  {transform: scale(1.13) rotate(3deg);}
+  to    {transform: scale(1.1) rotate(5deg);}
+}
+
+@keyframes kermas2 {
+  0% {transform:translate(0, 25%); opacity: 0;}
+  100% {transform:translate(0, 0) scale(1.13) rotate(3deg); opacity: 1;}
+}
+
+@keyframes kerkel2 {
+  to {transform: translateY(-100%); opacity: 0;}
+}
+
+.core .row #kertas2 {
+  transition: 1s ease;
+  animation:kermas2 3s ease forwards, rotk2 3s ease 3s infinite alternate;
+}
+
+.core .row #lineart {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  max-width: 70%;
+  animation: linemas 7s ease  forwards;
+}
+
+@keyframes linemas {
+  0%   {transform: translateY(0); opacity: 0;}
+  30%   {transform: translateY(0); opacity: 0;}
+  100% { transform: translateY(-17%); opacity: 1;}
+}
+
+@keyframes lineout {
+  0% { transform: translateY(-17%); opacity: 1;}
+  23% { transform: translateY(-17%); opacity: 1;}
+  100% { transform: translateY(-17%); opacity: 0;}
+}
+
+.core .row #kembang {
+  display: flex;
+  position: absolute;
+  z-index: 7;
+  top: 0;
+  left: 0;
+  transition: ease;
+  animation: anmasuk1 3s ease forwards, anmk1 3.5s ease-in-out 3s infinite alternate;
+}
+
+@keyframes anmk1 {
+  0% {transform: scale(1) translate3d(-15%, -15%, 0px);}
+  100% {transform: scale(1.1) translate3d(-13%, -15%, 0px) ;}
+}
+
+@keyframes anmasuk1 {
+  0% {transform:translate3d(-100%, -15%, 0px) ;}
+  100% {transform:translate3d(-15%, -15%, 0px) ;}
+}
+
+@keyframes anmk2 {
+  0% {transform: scale(-1) translate3d(-15%, -15%, 0px);}
+  100% {transform: scale(-1.1) translate3d(-13%, -15%, 0px) ;}
+}
+
+@keyframes anmasuk2 {
+  0% {transform: scale(-1.1) translate3d(-100%, -15%, 0px);}
+  100% {transform: scale(-1) translate3d(-15%, -15%, 0px);}
+}
+
+@keyframes keluark1 {
+  to {transform: scale(1) translate3d(-100%, -15%, 0px)}
+}
+
+@keyframes keluark2 {
+  0% {transform: scale(-1.1) translate3d(-13%, -15%, 0px); display: flex;}
+  100% {transform: scale(-1.1) translate3d(-100%, -15%, 0px);display: none;}
+}
+
+.core .row #kembang2 {
+  display: flex;
+  position: absolute;
+  z-index: 7;
+  left: 0;
+  bottom: 0;
+  animation: anmasuk2 3s ease forwards, anmk2 3.7s ease-in-out 3s infinite alternate;
+}
+
+.core .row #kembang,
+.core .row #kembang2 {
+  filter: drop-shadow(3px 3px 7px  var(--shadow));
+}
+
+.core .row #tombol {
+  animation: transtomb 4s ease forwards;
+}
+
+.core .row #tekanTombol {
+  animation: transtomb 4s ease forwards;
+}
+
+.core .row #textTamu {
+  animation: transtomb 4s ease forwards;
+}
+
+.core .row .tamu{
+  animation: transtomb 4s ease forwards;
+}
+
+@keyframes transtomb {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes ktomb {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.core .row #tombol{
+  display: flex;
+  position: absolute;
+  width: 75%;
+  z-index: 2;
+  transform: translateY(273%);
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: 1.2s ease;
+}
+
+.core .row #tekanTombol {
+  position: absolute;
+  z-index: 9;
+  font-family: "Corinthia", serif;
+  transform: translateY(437%);
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--pth);
+  width: 100%;
+  font-size: 7vw;
+  opacity: 1;
+  transition: 1s ease;
+}
+
+.core .row #textJudul {
+  display: flex;
+  position: absolute;
+  z-index: 9;
+  width: 55%;
+  transition: 1s ease;
+  animation: judulm 2s ease forwards;
+}
+
+@keyframes judulm {
+  0% {transform: translate(23%, -100%); opacity: 0;}
+  100% {transform: translate(23%, -143%); opacity: 1;}
+}
+
+@keyframes judulk {
+  from {transform: translate(23%, -143%); opacity: 1; display: flex;}
+  to {transform: translate(100%, -143%); opacity: 0; display: none}
+}
+
+.core .row #textTamu {
+  display: flex;
+  position: absolute;
+  z-index: 9;
+  width: 70%;
+  transform: translateY(131%);
+  opacity: 1;
+  transition: 1.2s ease;
+}
+
+.core .row .tamu {
+  display: flex;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  font-size: 5.7vw;
+  justify-content: center;
+  transform: translateY(313%);
+  font-family: "Bodoni Moda", serif;
+  font-weight: 400;
+  color: var(--pth);
+  transition: 1.2s ease;
+  opacity: 1;
+}
+
+.core .row .slamet {
+  display: none;
+  position: absolute;
+  z-index: 8;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--htm);
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  animation: mhitam 10s ease;
+}
+
+@keyframes mhitam {
+  0% {opacity: 0;}
+  25% {opacity: 1;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.core .row .slamet #sugengrawuh {
+  display: flex;
+  position: absolute;
+  width: 80%;
+  transform: translate(0, 0);
+  animation: msalam 10s ease-in-out;
+}
+
+@keyframes msalam {
+  0%  {opacity: 0; transform: scale(0);}
+  25% {opacity: 0;transform: scale(0.9);}
+  50% {opacity: 1;transform: scale(1);}
+  75% {opacity: 1;transform: scale(1);}
+  100%{opacity: 0;transform: scale(1);}
+}
+
+.core .row .slamet #aksen1 {
+  display: flex;
+  position: absolute;
+  height: 27%;
+  transform: translateY(13%);
+  animation: maksen1 10s ease;
+}
+
+@keyframes maksen1 {
+  0% {opacity: 0;}
+  10% {opacity: 0;}
+  40% {opacity: 0;}
+  90% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.core .row .slamet #akstitan {
+  display: flex;
+  position: absolute;
+  height: 25%;
+  top: 5%;
+  left: 5%;
+}
+
+.core .row .slamet #aksnando {
+  display: flex;
+  position: absolute;
+  height: 20%;
+  bottom: 5%;
+  right: 5%;
+}
+
+.core .row .slamet #akstitan,
+.core .row .slamet #aksnando {
+  animation: aksara 10s ease;
+}
+
+@keyframes aksara {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    40% {opacity: 0;}
+    90% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+.core .titandannando {
+  display: none;
+  z-index: 130;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.core .titandannando #textwedding1 {
+  display: flex;
+  padding: 21%;
+  position: absolute;
+  top: 0;
+  width: 23%;
+  opacity: 0;
+  animation: masukjudul 2s ease 9s forwards;
+}
+
+.core .titandannando #textpengantin1 {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 70%;
+  padding: 27%;
+  opacity: 0;
+  animation: masukjudul 2s ease 9.5s forwards;
+}
+
+.core .titandannando #tanggal1 {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 32%;
+  padding: 36%;
+  opacity: 0;
+  animation: masukjudul 2s ease 10s forwards;
+}
+
+@keyframes masukjudul {
+  0% {transform: translate(0,-23%); opacity: 0;}
+  100% {transform: translate(0,0); opacity: 1;}
+}
+
+.core .titandannando #scroll-btn {
+  position: absolute;
+  height: 4em;
+  width: 2em;
+  border: 0.175em solid var(--pth);
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 9.25em;
+  border-radius: 5em;
+}
+.core .titandannando a#scroll-btn:before {
+  position: absolute;
+  content: "";
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0.2em;
+  height: 0.5em;
+  width: 0.5em;
+  background-color: var(--pth);
+  border-radius: 50%;
+  animation: move-down 2s infinite;
+}
+@keyframes move-down {
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(2.5em);
+    opacity: 0;
+  }
+}
+/* akad-section */
+.akad {
+  position: relative;
+  z-index: 0;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  background-image: url(assets/img/bg1.jpg);
+}
+
+.akad .row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.akad .row .countdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.akad .row p {
+  text-align: center;
+  padding: 1rem;
+}
+
+.ketDate {
+  display: flex;
+  justify-content: center;
+  padding: 0.3rem 1rem;
+}
+
+.ketDate .ijab,
+.ketDate .resepsi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+/* couple-section */
+.couple {
+  position: relative;
+  z-index: 0;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(coklat);
+}
+
+.couple .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.man {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.dMan {
+  width: 50%;
+  text-align: end;
+  padding: 0 3rem;
+}
+
+.dGirl {
+  width: 50%;
+  padding: 0 3rem;
+  text-align: left;
+}
+
+.girl {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+/* quote-section */
+.quote {
+  position: relative;
+  z-index: 0;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.quote .row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+/* story-section */
+.story {
+  position: relative;
+  z-index: 0;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(coklat);
+}
+
+.story .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.timeline {
+  width: 100%;
+  list-style: none;
+  position: relative;
+  padding: 0;
+}
+
+.timeline::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 1.5px;
+  background-color: yellowgreen;
+  position: absolute;
+  left: 50%;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline li::before,
+.timeline li::after {
+  content: "";
+  display: table;
+}
+
+.timeline li::after {
+  clear: both;
+}
+
+.timeline li .timeline-img {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timeline li .timeline-panel {
+  width: 37%;
+  float: left;
+  position: relative;
+  z-index: 3;
+  padding: 0.3rem 1rem;
+  box-shadow: 5px 5px 5px;
+  background-color: #ccc;
+  border-radius: 7px;
+}
+
+.timeline li .timeline-panel::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  box-shadow: 5px -5px 5px;
+  background-color: #ccc;
+  border-radius: 3px;
+  rotate: 45deg;
+  top: 46%;
+  right: -9.5px;
+}
+
+.timeline li.timeline-invert .timeline-panel {
+  float: right;
+}
+
+.timeline li.timeline-invert .timeline-panel::before {
+  left: -9.5px;
+  box-shadow: none;
+}
+
+/* galery-section */
+.galery {
+  position: relative;
+  z-index: 0;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.galery .row {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.galery-foto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galery-foto img {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 1rem;
+}
+
+/* RSVP-Section */
+.RSVP {
+  position: relative;
+  z-index: 0;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(coklat);
+}
+
+.RSVP .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.tempat-komentar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: darkgray;
+}
+
+#data-tbody {
+  display: flex;
+  width: 100%;
+  background-color: white;
+}
+
+/* Gift-section */
+.gift {
+  position: relative;
+  z-index: 0;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.gift .row {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* footer */
+footer {
+  display: flex;
+  background-color: var(coklat);
+  padding: 2rem;
+  justify-content: center;
+}
