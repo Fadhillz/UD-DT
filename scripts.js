@@ -4,6 +4,27 @@ const jeneng = urlParam.get('to') || '';
 const candu = document.getElementById('candu');
 candu.innerText = ` ${jeneng}`;
 
+// animation on scrool
+const bn = document.querySelectorAll('.an');
+
+const anm = document.querySelectorAll('.anm');
+window.addEventListener('scroll',showanm);
+
+showanm();
+function showanm() {
+    const trigger = window.innerHeight / 5 * 4;
+
+    anm.forEach((a) => {
+        const boxTop = a.getBoundingClientRect().top;
+
+        if (boxTop < trigger) {
+            a.classList.add('show');
+        }  else {
+            a.classList.remove('show');
+        }
+    })
+}
+
 function bukaUndangan () {
     document.querySelector('.core').style.position = 'relative';
     document.querySelector('.aws').style.top = '-100vh';
@@ -22,6 +43,7 @@ function bukaUndangan () {
     document.querySelector('.slamet').style.display = "flex";
     document.querySelector('.titandannando').style.display = "flex";
     document.getElementById('core').scrollIntoView();
+    bn.classList.add('anm');
 };
 
 // simplyCoutdown
@@ -58,23 +80,23 @@ window.addEventListener("load", function() {
     });
 
 // Connect API to GSheet
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("https://sheet.best/api/sheets/9cff6333-bd1e-455d-8c30-0125785bc209")
-        .then(response => response.json())
-        .then(data => {
-            const tbody = document.getElementById('data-tbody');
-            data.forEach(item => {
-                const row = document.createElement('div');
-                row.innerHTML = `
-                    <p>${item.tanggal}</p>
-                    <p>${item.Nuama}</p>
-                    <p>${item.jumlahHadir}</p>
-                    <p>${item.status}</p>
-                    <p>${item.komentar}</p>
-                `;
-                row.classList.add('data-komen');
-                tbody.appendChild(row);
-            });
-        })
-        .catch(error => console.error('Error fetching data:', error));
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     fetch("https://sheet.best/api/sheets/9cff6333-bd1e-455d-8c30-0125785bc209")
+//         .then(response => response.json())
+//         .then(data => {
+//             const tbody = document.getElementById('data-tbody');
+//             data.forEach(item => {
+//                 const row = document.createElement('div');
+//                 row.innerHTML = `
+//                     <p>${item.tanggal}</p>
+//                     <p>${item.Nuama}</p>
+//                     <p>${item.jumlahHadir}</p>
+//                     <p>${item.status}</p>
+//                     <p>${item.komentar}</p>
+//                 `;
+//                 row.classList.add('data-komen');
+//                 tbody.appendChild(row);
+//             });
+//         })
+//         .catch(error => console.error('Error fetching data:', error));
+// });
