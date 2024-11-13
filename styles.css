@@ -10,13 +10,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
-
-.container {
-  max-width: 1080px;
-}
-
 
 .aws {
   position: absolute;
@@ -44,13 +39,21 @@ body {
   background-repeat: no-repeat;
 }
 
+
+.core::before,
 .core::after {
   content: '';
   display: block;
   position: absolute;
   width: 100%;
-  height: 30%;
+  height: 37%;
   background-image: linear-gradient(180deg, var(--htm), transparent);
+}
+
+.core::after {
+  bottom: 0;
+  background-image: linear-gradient(0deg, var(--htm), transparent);
+  height: 18%;
 }
 
 .core .row {
@@ -147,7 +150,7 @@ body {
 
 @keyframes anmasuk1 {
   0% {transform:translate3d(-100%, -15%, 0px) ;opacity: 0;}
-  100% {transform:translate3d(-15%, -15%, 0px) ;opacity: 1;}
+  100% {transform:translate3d(-15%, -15%, 0px);opacity: 1;}
 }
 
 @keyframes anmk2 {
@@ -387,7 +390,7 @@ body {
   position: absolute;
   top: 0;
   width: 70%;
-  padding: 27%;
+  padding-top: 27%;
   opacity: 0;
   animation: masukjudul 2s ease 9.5s forwards;
 }
@@ -397,7 +400,7 @@ body {
   position: absolute;
   top: 0;
   width: 32%;
-  padding: 36%;
+  padding-top: 36%;
   opacity: 0;
   animation: masukjudul 2s ease 10s forwards;
 }
@@ -446,16 +449,125 @@ body {
 .akad {
   position: relative;
   z-index: 0;
-  padding: 3rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  background-image: url(assets/img/bg1.jpg);
+  background-color: var(--coklat);
 }
 
 .akad .row {
   display: flex;
+  flex: 30%;
   width: 100%;
   flex-direction: column;
+}
+
+.akad .row .page1 {
+  display: flex;
+  background-color: red;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page1 */
+.akad .row .page1 .judul{
+  display: flex;
+}
+.akad .row .page1 .bar {
+  display: flex;
+}
+.akad .row .page1  .paragraf{
+  display: flex;
+  text-align: justify;
+  text-align-last: center;
+}
+
+/* Page2 */
+.akad .row .page2 {
+  display: flex;
+  background-color: green;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.akad .row .page2 .judul {
+  display: flex;
+}
+.akad .row .page2 .info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.akad .row .page2 .info .peta {
+  display: flex;
+  flex: 70%;
+  background-color: yellow;
+  padding: 10px;
+}
+
+.akad .row .page2 .info .waktu {
+  flex: 50%;
+  text-align: center;
+  background-color: rebeccapurple;
+}
+.akad .row .page2 .info .waktu .pukul {
+  display: flex;
+  background-color: brown;
+  justify-content: space-around;
+}
+
+/* Page3 */
+.akad .row .page3 {
+  display: flex;
+  background-color: blue;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.akad .row .page3 .info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.akad .row .page3 .info .resepsi {
+  display: flex;
+  flex: 45%;
+  flex-direction: column;
+  text-align: center;
+  background-color: purple;
+}
+.akad .row .page3 .info .resepsi .waktu {
+  display: flex;
+  flex-direction: column;
+  
+}
+.akad .row .page3 .info .resepsi .pukul {
+  display: flex;
+  justify-content: space-between;
+}
+.akad .row .page3 .info .aksen {
+  display: grid;
+  flex: 55%;
+  background-color: aqua;
+  flex-direction: column;
+  text-align: justify;
+  text-align-last: center;
+}
+.akad .row .page3 .info .aksen .baris1 {
+  display: flex;
+  background-color: #836435;
+  flex-direction: row;
+}
+.akad .row .page3 .info .aksen .baris1 .gambar {
+  display: flex;
+  flex: 50%;
+  height: 100%;
+  background-color: #232325;
+}
+.akad .row .page3 .info .aksen .baris1 p{
+  display: flex;
+  flex: 50%;
 }
 
 .akad .row .countdown {
@@ -463,34 +575,21 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
-.akad .row p {
-  text-align: center;
-  padding: 1rem;
-}
-
-.ketDate {
-  display: flex;
-  justify-content: center;
-  padding: 0.3rem 1rem;
-}
-
-.ketDate .ijab,
-.ketDate .resepsi {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-}
-
 /* couple-section */
 .couple {
   position: relative;
-  z-index: 0;
-  padding: 3rem 0;
+  z-index: 3;
   display: flex;
   justify-content: center;
-  background-color: var(coklat);
+}
+
+.couple::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 37%;
+  background-image: linear-gradient(180deg, white, transparent);
 }
 
 .couple .row {
@@ -498,33 +597,70 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pth);
+}
+
+.couple .row #kalpembuka {
+  position: relative;
+  color: var(--coklat);
+  font-family: "Bodoni Moda", serif;
+  font-weight: 600;
+  padding: 7% 3%;
+}
+
+/* Titania Nurul Anisa */
+.couple .row #fotoTitania,
+.couple .row #fotoNando {
+  display: flex;
+  position: relative;
+  width: 50%;
+  padding: 13%  0;
+  animation: outfadeB 2s ease forwards;
+
+}
+
+.couple .row #namaTitan,
+.couple .row #namaNando{
+  display: flex;
+  position: relative;
+  width: 70%;
+  padding: 7% 0;
+  animation: outfadeB 2s ease forwards;
+}
+
+.couple .row #igTitan,
+.couple .row #igNando {
+  display: flex;
+  position: relative;
+  width: 43%;
+  padding: 3% 0 10% 0;
+  animation: outfadeB 2s ease forwards;
+}
+
+.couple .row #fotoTitania.anm.show,
+.couple .row #fotoNando.anm.show,
+.couple .row #namaTitan.anm.show,
+.couple .row #namaNando.anm.show,
+.couple .row #igTitan.anm.show,
+.couple .row #igNando.anm.show {
+  animation: anfadeB 2s ease forwards;
+}
+
+@keyframes outfadeB {
+  to {transform: translateY(50%); opacity: 0;}
+}
+/* &&& */
+.core .row #batasDan {
+  display: flex;
+  position: relative;
+  padding: 50% 0;
   width: 100%;
 }
 
-.man {
-  display: flex;
-  padding: 1rem;
-  align-items: center;
-  flex-direction: row-reverse;
-}
 
-.dMan {
-  width: 50%;
-  text-align: end;
-  padding: 0 3rem;
-}
-
-.dGirl {
-  width: 50%;
-  padding: 0 3rem;
-  text-align: left;
-}
-
-.girl {
-  display: flex;
-  padding: 1rem;
-  align-items: center;
-}
 
 /* quote-section */
 .quote {
@@ -536,35 +672,45 @@ body {
   justify-content: center;
 }
 
+.quote::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 12%;
+  background-image: linear-gradient(180deg, var(--htm), transparent);
+}
+
 .quote .row {
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-.quote .row #kembang {
+.quote .row #kembangq {
   position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
-  opacity: 0;
+  animation: outfadeB 2s ease forwards;
 }
-.quote .row #kembang.anm.show  {
+.quote .row #kembangq.anm.show  {
   animation: anmasuk1 3s ease forwards, anmk1 3.5s ease-in-out 3s infinite alternate;
 }
 
-.quote .row #kembang2 {
-  display: flex;
+.quote .row #kembangq2 {
   position: absolute;
   z-index: 1;
-  right: 0;
   bottom: 0;
-  opacity: 0;
+  right: 0;
+  animation: outfadeB 2s ease forwards;
+  overflow-x: hidden;
 }
-.quote .row #kembang2.anm.show {
+.quote .row #kembangq2 {
   animation: anmasuk2 3s ease forwards, anmk2 3.7s ease-in-out 3s infinite alternate;
 }
 
@@ -573,37 +719,39 @@ body {
   max-width: 25%;
   padding: 17% 0% 7% 61%;
   z-index: 1;
-  opacity: 0;
+  animation: outfadeB 2s ease forwards;
 }
 
 .quote .row .kata {
   display: flex;
-  z-index: 2;
+  z-index: 0;
   background-color: var(--coklat);
   width: 100%;
   justify-content: center;
-  padding: 15% 0 ;
+  padding: 15% 0;
+  box-shadow: inset 0 0 45px 0px var(--htm);
 }
 
 .quote .row .kata #stampel {
   display: flex;
   position: relative;
   max-width: 90%;
-  opacity: 0;
   z-index: 1;
+  animation: outfadeB 2s ease forwards;
 }
 
 .quote .row #ucpan {
   display: flex;
   color: var(--coklat);
-  width: 100%;
+  width: 88%;
   font-size: 27px;
   text-align: left;
-  padding: 10% 0 10% 8%;
+  padding: 10% 0;
   font-family: "Bodoni Moda", serif;
   line-height: 27px;
   z-index: 1;
-  opacity: 0;
+  text-shadow: 13px 13px 3px rgb(0 0 0 / 17%);
+  animation: outfadeB 2s ease forwards;
 }
 
 .quote .row #tnl.anm.show ,
