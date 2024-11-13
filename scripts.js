@@ -52,10 +52,10 @@ simplyCountdown('.simply-countdown', {
     month: 11, 
     day: 27, 
     words: { 
-        days: { singular: 'hari', plural: 'hari' },
-        hours: { singular: 'jam', plural: 'jam' },
-        minutes: { singular: 'menit', plural: 'menit' },
-        seconds: { singular: 'detik', plural: 'detik' }
+        days: { singular: 'HARI', plural: 'HARI' },
+        hours: { singular: 'JAM', plural: 'JAM' },
+        minutes: { singular: 'MENIT', plural: 'MENIT' },
+        seconds: { singular: 'DETIK', plural: 'DETIK' }
     }
 });
 

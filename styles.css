@@ -3,6 +3,7 @@
   --pth: #f3f1e7;
   --htm: #232325;
   --shadow: rgba(0, 0, 0, 0.79);
+  --gradient: linear-gradient(90deg, #826435, #6C5220);
 }
 html {scroll-behavior: smooth;}
 
@@ -460,39 +461,93 @@ body {
   flex: 30%;
   width: 100%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--gradient);
+  padding: 30% 0;
 }
 
-.akad .row .page1 {
-  display: flex;
-  background-color: red;
+.akad .row::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
   width: 100%;
-  flex-direction: column;
-  align-items: center;
+  height: 9%;
+  background-image: linear-gradient(180deg, var(--pth), transparent);
 }
+
 
 /* Page1 */
+.akad .row .page1 {
+  display: flex;
+  width: 97%;
+  background-image: var(--gradient);
+  flex-direction: column;
+  align-items: center;
+  border-top: 5px double var(--pth);
+  border-right: 5px double var(--pth);
+  border-left: 5px double var(--pth);
+  border-bottom: 2px solid var(--pth);
+}
+
 .akad .row .page1 .judul{
   display: flex;
+  padding: 25% 0 3%;
+  width: 60%;
 }
 .akad .row .page1 .bar {
   display: flex;
+  width: 90%;
+  padding: 0% 1%;
+  justify-content: space-between;
+  border-top: 0.5px ridge var(--pth);
+  border-bottom: 0.5px double var(--pth);
+  align-items: center;
 }
-.akad .row .page1  .paragraf{
+.akad .row .page1 .bar .tg,
+.akad .row .page1 .bar .wk {
+  display: flex;
+  height: 50%;
+}
+.akad .row .page1 .paragraf{
   display: flex;
   text-align: justify;
   text-align-last: center;
+  width: 90%;
+}
+.akad .row .page1 p.paragraf {
+  font-size: 53%;
+  font-family: "Bodoni Moda", serif;
+  color: var(--pth);
+  line-height: 123%;
 }
 
 /* Page2 */
 .akad .row .page2 {
   display: flex;
-  background-color: green;
-  width: 100%;
+  width: 97%;
+  background-image: var(--gradient);
   flex-direction: column;
   align-items: center;
+  border-right: 5px double var(--pth);
+  border-left: 5px double var(--pth);
 }
 .akad .row .page2 .judul {
   display: flex;
+  width: 91%;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid var(--pth);
+  padding: 0% 2.5%;
+}
+.akad .row .page2 .judul h1{
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+  color: var(--pth);
+  font-size: 300%;
+  letter-spacing: 5px;
+  line-height: 100%;
 }
 .akad .row .page2 .info {
   display: flex;
@@ -502,28 +557,99 @@ body {
 .akad .row .page2 .info .peta {
   display: flex;
   flex: 70%;
-  background-color: yellow;
-  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.akad .row .page2 .info .peta .k {
+  width: 95%;
+  height: 95%;
+  background-color: saddlebrown;
 }
 
 .akad .row .page2 .info .waktu {
   flex: 50%;
   text-align: center;
-  background-color: rebeccapurple;
+  margin-right: 2%;
 }
-.akad .row .page2 .info .waktu .pukul {
+.akad .row .page2 .info .waktu h3,
+.akad .row .page3 .info .resepsi .waktu h3 {
+  margin: 0;
+  color: var(--pth);
+  font-family:"Bodoni Moda", serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 150%;
+  border-bottom: 0.1px solid var(--pth);
+}
+.akad .row .page2 .info .waktu h4,
+.akad .row .page3 .info .resepsi .waktu h4 {
+  margin: 0;
+  color: var(--pth);
+  font-family:"Bodoni Moda", serif;
+  font-size: 120%;
+}
+.akad .row .page2 .info .waktu .pukul,
+.akad .row .page3 .info .resepsi .waktu .pukul {
   display: flex;
-  background-color: brown;
+  padding-bottom: 3%;
+  border-bottom: 3px double var(--pth);
   justify-content: space-around;
+  align-items: center;
 }
+.akad .row .page2 .info .waktu .pukul h5,
+.akad .row .page3 .info .resepsi .waktu .pukul h5 {
+  display: flex;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 200;
+  color: var(--pth);
+  border: 0.1pt solid  var(--pth);
+  align-items: center;
+  justify-content: center;
+}
+.akad .row .page2 .info .waktu .pukul h4,
+.akad .row .page3 .info .resepsi .waktu .pukul h4 {
+  padding: 0 5%;
+  margin:0 3%;
+  border-left: 0.5px solid  var(--pth);
+  border-right: 0.5px solid  var(--pth);
+}
+.akad .row .page2 .info .waktu p,
+.akad .row .page3 .info .resepsi .waktu p{
+  margin: 0;
+  font-family: "Bodoni Moda", serif;
+  font-size: 70%;
+  line-height: 120%;
+  text-align: justify;
+  text-align-last: center;
+  color: var(--pth);
+  padding: 3% 0 ;
+  border-bottom: 0.3px solid var(--pth);
+}
+.akad .row .page2 .info .waktu button, 
+.akad .row .page3 .info .resepsi .waktu button{
+  width: 85%;
+  padding: 6% 0;
+  margin: 9% 0;
+  font-family: "Bodoni Moda", serif;
+  background-color: var(--coklat);
+  border: 3px double var(--pth);
+  color: var(--pth);
+  letter-spacing: 2px;
+}
+
 
 /* Page3 */
 .akad .row .page3 {
   display: flex;
-  background-color: blue;
-  width: 100%;
+  background-image: var(--gradient);
+  width: 97%;
   flex-direction: column;
   flex-wrap: wrap;
+  border: 5px double var(--pth);
+  border-top: none;
 }
 .akad .row .page3 .info {
   display: flex;
@@ -532,49 +658,98 @@ body {
 }
 .akad .row .page3 .info .resepsi {
   display: flex;
-  flex: 45%;
+  flex: 15%;
+  margin: 1%;
   flex-direction: column;
   text-align: center;
-  background-color: purple;
+  color: var(--pth);
+}
+.akad .row .page3 .info .resepsi h2 {
+  font-family: "Bodoni Moda", serif;
+  font-size: 213%;
+  letter-spacing: 5px;
+  padding: 7% 0 3%;
+  margin: 0;
 }
 .akad .row .page3 .info .resepsi .waktu {
   display: flex;
   flex-direction: column;
-  
+  padding: 3%;
+  border: 1px solid;
 }
-.akad .row .page3 .info .resepsi .pukul {
-  display: flex;
-  justify-content: space-between;
+.akad .row .page3 .info .resepsi .waktu button {
+  align-self: center;
 }
 .akad .row .page3 .info .aksen {
-  display: grid;
-  flex: 55%;
-  background-color: aqua;
+  padding-top: 5%;
+  display: flex;
+  flex: 42%;
   flex-direction: column;
   text-align: justify;
   text-align-last: center;
+  color: var(--pth);
 }
 .akad .row .page3 .info .aksen .baris1 {
   display: flex;
-  background-color: #836435;
   flex-direction: row;
+  margin: 2%;
 }
 .akad .row .page3 .info .aksen .baris1 .gambar {
-  display: flex;
-  flex: 50%;
-  height: 100%;
-  background-color: #232325;
+  height: fit-content;
+  width: 60%;
+  padding: 3%;
+  align-self: center;
 }
 .akad .row .page3 .info .aksen .baris1 p{
   display: flex;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 200;
   flex: 50%;
+  font-size: 8px;
+  margin: 0;
+}
+.akad .row .page3 .info .aksen p {
+  font-size: 8px;
+  margin: 2%;
+  font-family: "Bodoni Moda", serif;
+  font-weight: 200;
+}
+.akad .row .page3 .info .aksen h5 {
+  margin: 3% auto 0;
+  padding: 3% 9% 0;
+  font-family: "Corinthia", serif;
+  font-weight: 600;
+  border-top: 1px solid;
+}
+
+.akad .row .page3 .penutup {
+  display: flex;
+  text-align-last: center;
+  justify-content: center;
+  padding: 2% 0 10%;
+}
+.akad .row .page3 .penutup p {
+  width: 95%;
+  color: var(--pth);
+  font-family: "Bodoni Moda", serif;
+  padding: 1%;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-align: justify;
+  border-top: 1px solid ;
 }
 
 .akad .row .countdown {
   display: flex;
-  justify-content: space-between;
+  background-image: var(--gradient);
+  width: 97%;
+  justify-content: space-around;
   align-items: center;
+  color: var(--pth);
+  border: 5px  double;
 }
+
+
 /* couple-section */
 .couple {
   position: relative;
@@ -607,7 +782,7 @@ body {
   position: relative;
   color: var(--coklat);
   font-family: "Bodoni Moda", serif;
-  font-weight: 600;
+  font-weight: 200;
   padding: 7% 3%;
 }
 
@@ -660,8 +835,6 @@ body {
   width: 100%;
 }
 
-
-
 /* quote-section */
 .quote {
   display: flex;
@@ -678,6 +851,7 @@ body {
   position: absolute;
   width: 100%;
   height: 12%;
+  top: -1px;
   background-image: linear-gradient(180deg, var(--htm), transparent);
 }
 
