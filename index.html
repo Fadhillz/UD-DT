@@ -155,105 +155,56 @@
 
     <!-- storySection -->
     <section class="story" id="story">
-      <div class="row container">
-        <h1>Kisah Perjalanan</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis.</p>
-        <ul class="timeline">
-          <li>
-            <div
-              class="timeline-img"
-              style="background-image: url('https://picsum.photos/200/300')"
-            ></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h1>Lorem Ipsum</h1>
-                <span>19 Agustus 2016</span>
-              </div>
-              <div class="timeline-kisah">
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut
-                  error quasi labore dolore.
-                </p>
+      <div class="row">
+        <object data="assets/svg/linefl.svg" type="image/svg+xml" id="line"></object>
+        <object data="assets/svg/giftt.svg" type="image/svg+xml" id="giftf"></object>
+        <div class="wed">
+          <div class="foto">
+            <div class="pasangan"></div>
+            <img src="assets/frame.png" class="ft" id="frame">
+          </div>
+          <div class="hadiah">
+            <p><span>Doa restu</span> anda adalah karunia terindah yang sangat berarti bagi kami. Jika berkenan menyampaikan tanda kasih melalui pemberian, Anda dapat melakukannya secara cashless.</p>
+            <div class="alamat">
+              <object data="assets/svg/hadiah.svg" type="image/svg+xml" id="hd"></object>
+              <h5>
+                Nama Penerima : Titania Nurul Anisa <br>
+                No. HP : 0895355047255<br>
+                Desa Sukadadi 10,  Kecamatan Gedongtataan, Kab. Pesawaran, Lampung.
+              </h5>
+            </div>
+            <div class="atmtitan">
+              <img src="assets/MANDIRI.png" id="mandiri">
+              <div id="noT">
+                <h3>MANDIRI || Titania Nurul Anisa</h3>
+                <h2>1140021939205</h2>
+                <button>salin</button>
               </div>
             </div>
-          </li>
-          <li class="timeline-invert">
-            <div
-              class="timeline-img"
-              style="background-image: url('https://picsum.photos/200/300')"
-            ></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h1>Lorem Ipsum</h1>
-                <span>19 Agustus 2016</span>
-              </div>
-              <div class="timeline-kisah">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit
-                  totam illo fuga sequi quibusdam necessitatibus in.
-                </p>
+            <div class="atmnando">
+              <img src="assets/BCA.png" id="bca">
+              <div id="noN">
+                <h3>BCA || Muhammad Dwi Fernando</h3>
+                <h2>4300533413</h2>
+                <button>salin</button>
               </div>
             </div>
-          </li>
-          <li>
-            <div
-              class="timeline-img"
-              style="background-image: url('https://picsum.photos/200/300')"
-            ></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h1>Lorem Ipsum</h1>
-                <span>19 Agustus 2016</span>
-              </div>
-              <div class="timeline-kisah">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                  excepturi perferendis repudiandae voluptas animi nisi
-                  blanditiis et soluta distinctio voluptatem?
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!-- endStorySection -->
-
-    <!-- galerySection -->
-    <section class="galery" id="galery">
-      <div class="row container">
-        <h1>Tempat Keindahan</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        <div class="galery-foto">
-          <a href="foto/2.jpg" data-lightbox="galery-indah" data-title="foto2">
-            <img src="foto/2.jpg" alt="foto2" />
-          </a>
-          <a href="foto/1.png" data-lightbox="galery-indah" data-title="foto1">
-            <img src="foto/1.png" alt="foto1" />
-          </a>
-          <a href="foto/3.png" data-lightbox="galery-indah" data-title="foto3">
-            <img src="foto/3.png" alt="foto3" />
-          </a>
+          </div>
         </div>
       </div>
     </section>
-    <!-- endGalerySection -->
-
+    <!-- endStorySection -->
+    
     <!-- RSVP-Section -->
     <section class="RSVP" id="RSVP">
-      <div class="row container">
-        <h1>konfimasi kehadiran</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-          blanditiis suscipit omnis?
-        </p>
+      <div class="row">
+        <object data="assets/svg/ungkapan.svg" type="image/svg+xml" id="ungkapan"></object>
         <form
           class="konfir"
           method="POST"
           action="https://script.google.com/macros/s/AKfycby3G_WGvonFtLX5B2rIRZBbPyHi_7yLkCos1rKDClIoTKvKAKDhOeodMePsiSAZiXMVyg/exec"
         >
           <div class="konfir-nama">
-            <label for="Nama" class="konfir-label">Nama</label>
             <input
               type="text"
               class="konfir-form"
@@ -262,28 +213,16 @@
               required
             />
           </div>
-          <div class="konfir-jumlah">
-            <label for="Jumlah" class="konfir-label">Jumlah</label>
-            <input
-              type="number"
-              class="konfir-form"
-              id="Jumlah"
-              name="jumlahHadir"
-              min="1"
-              max="7"
-              value="1"
-            />
-          </div>
+          
           <div class="konfir-hadir">
-            <label for="hadir" class="konfir-label">hadir</label>
             <select name="status" id="hadir" class="konfir-form" required>
               <option disabled selected>Pilih salah satu</option>
               <option value="hadir">Saya Hadir</option>
               <option value="tidak-hadir">Saya Tidak Hadir</option>
             </select>
           </div>
+
           <div class="konfir-komen">
-            <label for="komentar" class="konfir-label">pesan</label>
             <input
               type="text"
               class="konfir-form"
@@ -292,25 +231,13 @@
               required
             />
           </div>
+
           <div class="konfir-kirim">
-            <button>Kirim Konfirmasi Kehadiran</button>
+            <button>Kirim</button>
           </div>
         </form>
         <div class="tempat-komentar">
-          <table>
-            <!-- <thead>
-                        <tr>
-                            <th>tanggal</th>
-                            <th>Nama</th>
-                            <th>Jumlah</th>
-                            <th>Kehadiran</th>
-                            <th>Pesan</th>
-                        </tr>
-                    </thead> -->
-            <tbody id="data-tbody">
-              <!-- Data dari API akan diload di sini -->
-            </tbody>
-          </table>
+          <!-- tepat komentar -->
         </div>
       </div>
     </section>
