@@ -104,6 +104,12 @@ window.addEventListener("DOMContentLoaded", async function () {
     });
     const comments = await commentsFetch.json();
 
+    if (!comments.length) {
+        const div = document.createElement("div");
+        div.classList.add("komentar-empty");
+        div.innerHTML = "<p class='komentar__empty'>Belum ada komentar</p>";
+    }
+
     for (let komen of comments) {
         const div = document.createElement("div");
         div.classList.add("komentar");
