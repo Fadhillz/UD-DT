@@ -1,135 +1,146 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UDDT</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- simplyCountdown -->
-    <link rel="stylesheet" href="coutdown/simplyCountdown.theme.default.css" />
-    <script src="coutdown/simplyCountdown.min.js"></script>
-    <!-- lightbox -->
-    <link rel="stylesheet" href="lightbox/css/lightbox.min.css" />
-    <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
-    <!-- Fonts.Family -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Corinthia:wght@400;700&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UDDT</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- simplyCountdown -->
+  <link rel="stylesheet" href="coutdown/simplyCountdown.theme.default.css" />
+  <script src="coutdown/simplyCountdown.min.js"></script>
+  <!-- lightbox -->
+  <link rel="stylesheet" href="lightbox/css/lightbox.min.css" />
+  <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
+  <!-- Fonts.Family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Corinthia:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
 
-    <!-- Loading -->
-    <section class="loading" id="loading">
-      <div class="s">
-        <img src="assets/tnl.png">
+<body>
+
+  <!-- Loading -->
+  <section class="loading" id="loading">
+    <div class="s">
+      <img src="assets/tnl.png">
+    </div>
+  </section>
+
+  <!-- coreSection -->
+  <section class="core" id="core">
+    <div class="aws" id="asw"></div>
+    <div class="row">
+      <img src="assets/img/lineart.png" alt="Couple2" id="lineart" />
+      <img src="assets/bungaa.png" id="kembang"> </img>
+      <img src="assets/bungaa.png" id="kembang2"> </img>
+      <img src="assets/kertas2.png" id="kertas2"> </img>
+      <img src="assets/kertas1.png" id="kertas1"> </img>
+      <img src="assets/tombol.png" id="tombol"> </img>
+      <object data="assets/svg/Text.svg" type="image/svg+xml" id="textJudul"></object>
+      <object data="assets/svg/tamu.svg" type="image/svg+xml" id="textTamu"></object>
+      <h1 class="tamu" id="candu">Selamat Datang Manusia</h1>
+      <button id="tekanTombol" onclick="bukaUndangan()">Buka Undangan</button>
+      <div class="slamet">
+        <object data="assets/svg/sugengrawuh.svg" type="image/svg+xml" id="sugengrawuh"></object>
+        <object data="assets/svg/aksen1.svg" type="image/svg+xml" id="aksen1"></object>
+        <img src="assets/akstitan.png" id="akstitan"> </img>
+        <img src="assets/aksnando.png" id="aksnando"> </img>
       </div>
-    </section>
+    </div>
+    <div class="titandannando">
+      <object data="assets/svg/wddtx.svg" type="image/svg+xml" id="textwedding1"></object>
+      <object data="assets/svg/tnn.svg" type="image/svg+xml" id="textpengantin1"></object>
+      <object data="assets/svg/tanggal.svg" type="image/svg+xml" id="tanggal1"></object>
+      <a id="scroll-btn" href="#quote"></a>
+    </div>
+  </section>
+  <!-- endCoreSection -->
 
-    <!-- coreSection -->
-    <section class="core" id="core" >
-      <div class="aws" id="asw"></div>
-      <div class="row">
-        <img src="assets/img/lineart.png" alt="Couple2" id="lineart" />
-        <img src="assets/bungaa.png"    id="kembang">   </img>
-        <img src="assets/bungaa.png"    id="kembang2">  </img>
-        <img src="assets/kertas2.png"   id="kertas2">   </img>
-        <img src="assets/kertas1.png"   id="kertas1">   </img>
-        <img src="assets/tombol.png"    id="tombol">    </img>
-        <object data="assets/svg/Text.svg" type="image/svg+xml" id="textJudul"></object>
-        <object data="assets/svg/tamu.svg" type="image/svg+xml" id="textTamu"></object>
-        <h1 class="tamu" id="candu">Selamat Datang Manusia</h1>
-        <button id="tekanTombol"  onclick="bukaUndangan()">Buka Undangan</button>
-        <div class="slamet">
-          <object data="assets/svg/sugengrawuh.svg" type="image/svg+xml" id="sugengrawuh"></object>
-          <object data="assets/svg/aksen1.svg" type="image/svg+xml" id="aksen1"></object>
-          <img src="assets/akstitan.png"  id="akstitan">  </img>
-          <img src="assets/aksnando.png"  id="aksnando">  </img>
+  <!-- quoteSection -->
+  <section class="quote" id="quote">
+    <div class="row">
+      <img src="assets/bungaa.png" id="kembangq" class="anm"> </img>
+      <img src="assets/bungaa.png" id="kembangq2" class="anm"> </img>
+      <img src="assets/tnl.png" id="tnl" class="anm"> </img>
+      <div class="kata">
+        <img src="assets/stamel akad.png" id="stampel" class="anm"></img>
+      </div>
+      <p class="anm" id="ucpan">"Een nieuw verhaal<br>zal beginnen."</p>
+    </div>
+  </section>
+  <!-- endQuoteSection -->
+
+  <!-- coupleSection -->
+  <section class="couple" id="couple" hidden>
+    <div class="row">
+      <p id="kalpembuka" class="anm">Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan. Ya Allah
+        rahmatilah pernikahan kami :</p>
+      <!-- Titania Nurul Anisa -->
+      <img src="assets/img/imgtitania.png" alt="Titania" id="fotoTitania" class="anm">
+      <object data="assets/svg/namatitan.svg" type="image/svg+xml" id="namaTitan" class="anm"></object>
+      <img src="assets/igtitan.png" alt="igtitan" id="igTitan" class="anm">
+      <!-- &&& -->
+      <object data="assets/svg/batasdan.svg" type="image/svg+xml" id="batasDan" class="anm"></object>
+      <!-- M Dwi Fernando -->
+      <img src="assets/img/imgnando.png" alt="Fernando" id="fotoNando" class="anm">
+      <object data="assets/svg/namanando.svg" type="image/svg+xml" id="namaNando" class="anm"></object>
+      <img src="assets/ignando.png" alt="igNando" id="igNando" class="anm">
+    </div>
+  </section>
+  <!-- endCoupleSection -->
+
+  <!-- akadSection -->
+  <section class="akad anm" id="akad" hidden>
+    <div class="row">
+      <!-- Page Pertama (judul) -->
+      <div class="page1">
+        <object data="assets/svg/akadresepsi.svg" type="image/svg+xml" class="judul"></object>
+        <div class="bar">
+          <img src="assets/tanggal.png" alt="gm1" class="tg">
+          <img src="assets/waktu.png" alt="gm2" class="wk">
         </div>
+        <p class="paragraf"> Dengan segenap rasa hormat dan ketulusan, kami memohon kehadiran Bapak/Ibu/Saudara/i serta
+          segenap keluarga dan kerabat tercinta untuk berkenan hadir dalam momen bahagia kami, yaitu acara pernikahan
+          kami:</p>
       </div>
-      <div class="titandannando">
-        <object data="assets/svg/wddtx.svg" type="image/svg+xml" id="textwedding1"></object> 
-        <object data="assets/svg/tnn.svg" type="image/svg+xml" id="textpengantin1"></object> 
-        <object data="assets/svg/tanggal.svg" type="image/svg+xml" id="tanggal1"></object> 
-        <a id="scroll-btn" href="#quote"></a>
-      </div>
-    </section>
-    <!-- endCoreSection -->
-
-    <!-- quoteSection -->
-    <section class="quote" id="quote">
-      <div class="row">
-        <img src="assets/bungaa.png" id="kembangq"  class="anm">   </img>
-        <img src="assets/bungaa.png" id="kembangq2" class="anm">   </img>
-        <img src="assets/tnl.png" id="tnl" class="anm">   </img  >
-        <div class="kata">
-          <img src="assets/stamel akad.png"id="stampel" class="anm" ></img>
+      <!-- Page Kedua (Akad Nikah) -->
+      <div class="page2">
+        <div class="judul">
+          <h1>AKAD NIKAH</h1>
         </div>
-        <p class="anm" id="ucpan">"Een nieuw verhaal<br>zal beginnen."</p>
-      </div>
-    </section>
-    <!-- endQuoteSection -->
-
-    <!-- coupleSection -->
-    <section class="couple" id="couple" hidden>
-      <div class="row">
-        <p id="kalpembuka" class="anm">Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan. Ya Allah rahmatilah pernikahan kami :</p>
-        <!-- Titania Nurul Anisa -->
-        <img src="assets/img/imgtitania.png" alt="Titania" id="fotoTitania" class="anm">
-        <object data="assets/svg/namatitan.svg" type="image/svg+xml" id="namaTitan" class="anm"></object>
-        <img src="assets/igtitan.png" alt="igtitan" id="igTitan" class="anm">
-        <!-- &&& -->
-        <object data="assets/svg/batasdan.svg" type="image/svg+xml" id="batasDan" class="anm"></object>
-        <!-- M Dwi Fernando -->
-        <img src="assets/img/imgnando.png" alt="Fernando" id="fotoNando" class="anm">
-        <object data="assets/svg/namanando.svg" type="image/svg+xml" id="namaNando" class="anm"></object>
-        <img src="assets/ignando.png" alt="igNando" id="igNando" class="anm">
-      </div>
-    </section>
-    <!-- endCoupleSection -->
-
-    <!-- akadSection -->
-    <section class="akad anm" id="akad" hidden>
-      <div class="row">
-        <!-- Page Pertama (judul) -->
-        <div class="page1">
-          <object data="assets/svg/akadresepsi.svg" type="image/svg+xml" class="judul"></object>
-          <div class="bar">
-            <img src="assets/tanggal.png" alt="gm1" class="tg">
-            <img src="assets/waktu.png" alt="gm2" class="wk">
+        <div class="info">
+          <div class="peta">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m13!1m11!1m3!1d688.2106580512728!2d105.08654414276093!3d-5.401369181868638!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1731641641913!5m2!1sid!2sid"
+              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" id="maps"></iframe>
           </div>
-          <p class="paragraf">	Dengan segenap rasa hormat dan ketulusan, kami memohon kehadiran Bapak/Ibu/Saudara/i serta segenap keluarga dan kerabat tercinta untuk berkenan hadir dalam momen bahagia kami, yaitu acara pernikahan kami:</p>
-        </div>
-        <!-- Page Kedua (Akad Nikah) -->
-        <div class="page2">
-          <div class="judul"><h1>AKAD NIKAH</h1></div>
-          <div class="info">
-            <div class="peta">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m11!1m3!1d688.2106580512728!2d105.08654414276093!3d-5.401369181868638!2m2!1f0!2f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1731641641913!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="maps"></iframe>
+          <div class="waktu">
+            <h3>SABTU</h3>
+            <h4>23 NOVEMBER 2024</h4>
+            <div class="pukul">
+              <h5>PUKUL</h5>
+              <h4>08:00</h4>
+              <h5>WIB</h5>
             </div>
+            <p>Bertempat di Desa Sukadadi No. 10, Kecamatan Gedongtataan, Kabupaten Pesawaran, Lampung.</p>
+            <button>Save The Date</button>
+          </div>
+        </div>
+      </div>
+      <!-- Hitung Mundur -->
+      <div class="countdown">
+        <div class="simply-countdown"></div>
+      </div>
+      <!-- Page Ketiga (Resepsi &&  kata %% penutup) -->
+      <div class="page3">
+        <div class="info">
+          <div class="resepsi">
+            <h2>RESEPSI</h2>
             <div class="waktu">
-              <h3>SABTU</h3>
-              <h4>23 NOVEMBER 2024</h4>
-              <div class="pukul">
-                <h5>PUKUL</h5>
-                <h4>08:00</h4>
-                <h5>WIB</h5>
-              </div>
-              <p>Bertempat di Desa Sukadadi No. 10, Kecamatan Gedongtataan, Kabupaten Pesawaran, Lampung.</p>
-              <button>Save The Date</button>
-            </div>
-          </div>
-        </div>
-        <!-- Hitung Mundur -->
-        <div class="countdown">
-          <div class="simply-countdown"></div>
-        </div>
-        <!-- Page Ketiga (Resepsi &&  kata %% penutup) -->
-        <div class="page3">
-          <div class="info">
-            <div class="resepsi">
-              <h2>RESEPSI</h2>
-              <div class="waktu">
               <h3>Sabtu</h3>
               <h4>23 NOVEMBER 2024</h4>
               <div class="pukul">
@@ -139,7 +150,7 @@
               </div>
               <p>Bertempat di Desa Sukadadi No. 10, Kecamatan Gedongtataan, Kabupaten Pesawaran, Lampung.</p>
               <button>Save The Date</button>
-              </div>
+            </div>
           </div>
           <div class="aksen">
             <div class="baris1">
@@ -147,134 +158,135 @@
                 assaulted by the storm, tossed about in chaos,<br>
                 and yet persevere, even under a thousand pressures... thundering<br>
                 accompanied by flashes of light-both beautiful and terrifying.
-                </p>
+              </p>
               <img src="assets/img/kembangputih.png" alt="gambar" class="gambar">
             </div>
-            <p>A soul full of hopes and dreams... will persevere... because, yes, we promised, we will get through all of this... hope, to be with you in every situation... until that time comes.<br>
-              So beautiful, when the warm light is present, finally... That time will come, when, the beauty of the Creator fills the universe. At that moment we blossomed, becoming part of His beauty,  the fruit of a journey of love for the Creator... in the Creator's destiny of true beauty.
+            <p>A soul full of hopes and dreams... will persevere... because, yes, we promised, we will get through all
+              of this... hope, to be with you in every situation... until that time comes.<br>
+              So beautiful, when the warm light is present, finally... That time will come, when, the beauty of the
+              Creator fills the universe. At that moment we blossomed, becoming part of His beauty, the fruit of a
+              journey of love for the Creator... in the Creator's destiny of true beauty.
             </p>
             <h5>The Beauty of His Destiny</h5>
           </div>
         </div>
         <div class="penutup">
-          <p>Het is niet gemakkelijk om te zijn waar we nu zijn. We hebben veel meegemaakt, we zijn gevallen, opgestaan en samen gegroeid. En nu gaat ons verhaal een nieuw hoofdstuk in, een reis waar we lang van gedroomd hebben.</p>
+          <p>Het is niet gemakkelijk om te zijn waar we nu zijn. We hebben veel meegemaakt, we zijn gevallen, opgestaan
+            en samen gegroeid. En nu gaat ons verhaal een nieuw hoofdstuk in, een reis waar we lang van gedroomd hebben.
+          </p>
         </div>
       </div>
-    </section>
-    <!-- endAkadSection -->
+  </section>
+  <!-- endAkadSection -->
 
-    <!-- storySection -->
-    <section class="story" id="story">
-      <div class="row">
-        <object data="assets/svg/linefl.svg" type="image/svg+xml" id="line"></object>
-        <object data="assets/svg/giftt.svg" type="image/svg+xml" id="giftf"></object>
-        <div class="wed">
-          <div class="foto">
-            <div class="pasangan"></div>
-            <img src="assets/frame.png" class="ft" id="frame">
+  <!-- storySection -->
+  <section class="story" id="story">
+    <div class="row">
+      <object data="assets/svg/linefl.svg" type="image/svg+xml" id="line"></object>
+      <object data="assets/svg/giftt.svg" type="image/svg+xml" id="giftf"></object>
+      <div class="wed">
+        <div class="foto">
+          <div class="pasangan"></div>
+          <img src="assets/frame.png" class="ft" id="frame">
+        </div>
+        <div class="hadiah">
+          <p><span>Doa restu</span> anda adalah karunia terindah yang sangat berarti bagi kami. Jika berkenan
+            menyampaikan tanda kasih melalui pemberian, Anda dapat melakukannya secara cashless.</p>
+          <div class="alamat">
+            <object data="assets/svg/hadiah.svg" type="image/svg+xml" id="hd"></object>
+            <h5>
+              Nama Penerima : Titania Nurul Anisa <br>
+              No. HP : 0895355047255<br>
+              Desa Sukadadi 10, Kecamatan Gedongtataan, Kab. Pesawaran, Lampung.
+            </h5>
           </div>
-          <div class="hadiah">
-            <p><span>Doa restu</span> anda adalah karunia terindah yang sangat berarti bagi kami. Jika berkenan menyampaikan tanda kasih melalui pemberian, Anda dapat melakukannya secara cashless.</p>
-            <div class="alamat">
-              <object data="assets/svg/hadiah.svg" type="image/svg+xml" id="hd"></object>
-              <h5>
-                Nama Penerima : Titania Nurul Anisa <br>
-                No. HP : 0895355047255<br>
-                Desa Sukadadi 10,  Kecamatan Gedongtataan, Kab. Pesawaran, Lampung.
-              </h5>
+          <div class="atmtitan">
+            <img src="assets/MANDIRI.png" id="mandiri">
+            <div id="noT">
+              <h3>MANDIRI || Titania Nurul Anisa</h3>
+              <h2>1140021939205</h2>
+              <button>salin</button>
             </div>
-            <div class="atmtitan">
-              <img src="assets/MANDIRI.png" id="mandiri">
-              <div id="noT">
-                <h3>MANDIRI || Titania Nurul Anisa</h3>
-                <h2>1140021939205</h2>
-                <button>salin</button>
-              </div>
-            </div>
-            <div class="atmnando">
-              <img src="assets/BCA.png" id="bca">
-              <div id="noN">
-                <h3>BCA || Muhammad Dwi Fernando</h3>
-                <h2>4300533413</h2>
-                <button>salin</button>
-              </div>
+          </div>
+          <div class="atmnando">
+            <img src="assets/BCA.png" id="bca">
+            <div id="noN">
+              <h3>BCA || Muhammad Dwi Fernando</h3>
+              <h2>4300533413</h2>
+              <button>salin</button>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- endStorySection -->
-    
-    <!-- RSVP-Section -->
-    <section class="RSVP" id="RSVP">
-      <div class="row">
-        <object data="assets/svg/ungkapan.svg" type="image/svg+xml" id="ungkapan"></object>
-        <form
-          class="konfir"
-          method="POST"
-        >
-          <div class="konfir-nama">
-            <input
-              type="text"
-              class="konfir-form"
-              id="nama"
-              name="Nuama"
-              required
-            />
-          </div>
-          
-          <div class="konfir-hadir">
-            <select name="status" id="hadir" class="konfir-form" required>
-              <option disabled selected>Pilih salah satu</option>
-              <option value="hadir">Saya Hadir</option>
-              <option value="tidak-hadir">Saya Tidak Hadir</option>
-            </select>
-          </div>
+    </div>
+  </section>
+  <!-- endStorySection -->
 
-          <div class="konfir-komen">
-            <input
+  <!-- RSVP-Section -->
+  <section class="RSVP" id="RSVP">
+    <div class="row">
+      <object data="assets/svg/ungkapan.svg" type="image/svg+xml" id="ungkapan"></object>
+      <!-- ! IMPORTANT, CHANGE URL TO YOUR OWN DB ! -->
+      <form class="konfir" method="POST" action="http://localhost:3000/api/comment">
+        <input type="text" name="secretKey" value="67377fed2b3d1e1c31024bf1" hidden />
+        <div class="konfir-nama">
+          <input type="text" class="konfir-form" id="nama" name="guestName" placeholder="Nama Anda" maxlength="50" required />
+        </div>
+
+        <div class="konfir-hadir">
+          <select name="status" id="hadir" class="konfir-form" required>
+            <option disabled selected>Pilih salah satu</option>
+            <option value="hadir">Saya Hadir</option>
+            <option value="tidak-hadir">Saya Tidak Hadir</option>
+          </select>
+        </div>
+
+        <div class="konfir-komen">
+          <textarea class="konfir-form" name="comment" id="komentar" placeholder="Pesan untuk pengantin" required></textarea>
+          <!-- <input
               type="text"
               class="konfir-form"
               id="komentar"
               name="komentar"
               required
-            />
-          </div>
-
-          <div class="konfir-kirim">
-            <button>Kirim</button>
-          </div>
-        </form>
-        <div class="tempat-komentar">
-          <!-- tepat komentar -->
+            /> -->
         </div>
-      </div>
-    </section>
-    <!-- endRSVP-Section -->
 
-    <!-- giftSection -->
-    <section class="gift" id="gift">
-      <div class="row">
+        <div class="konfir-kirim">
+          <button type="submit">Kirim</button>
+        </div>
+      </form>
+      <div class="tempat-komentar">
+        <!-- tepat komentar -->
+      </div>
+    </div>
+  </section>
+  <!-- endRSVP-Section -->
+
+  <!-- giftSection -->
+  <section class="gift" id="gift">
+    <div class="row">
       <object data="assets/svg/penutup.svg" type="image/svg+xml" id="penutup"></object>
       <object data="assets/svg/thewedding.svg" type="image/svg+xml" id="thewedding"></object>
       <object data="assets/svg/Titaniaa.svg" type="image/svg+xml" id="Titaniaa"></object>
       <object data="assets/svg/and.svg" type="image/svg+xml" id="and"></object>
       <object data="assets/svg/Nandoo.svg" type="image/svg+xml" id="Nandoo"></object>
       <img src="assets/Layer 21.png" id="layerb">
-      </div>
-    </section>
-    <!-- endGiftSection -->
+    </div>
+  </section>
+  <!-- endGiftSection -->
 
-    <!-- footer -->
-    <footer>
-      <div class="row">
-        <h3>DESIGN AND BUILT BY <a href="">FADHIL LABIB ZUHAIRY</a> </h3>
-        <h3>2024 </h3>
-      </div>
-    </footer>
+  <!-- footer -->
+  <footer>
+    <div class="row">
+      <h3>DESIGN AND BUILT BY <a href="">FADHIL LABIB ZUHAIRY</a> </h3>
+      <h3>2024 </h3>
+    </div>
+  </footer>
 
-    <!-- js -->
-    <script src="scripts.js"></script>
+  <!-- js -->
+  <script src="scripts.js"></script>
 
-  </body>
+</body>
+
 </html>

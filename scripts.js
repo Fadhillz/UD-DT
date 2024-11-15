@@ -1,17 +1,17 @@
 // membuat onloading
-window.addEventListener('load', function() {
-    
+window.addEventListener('load', function () {
+
     const loadingElement = document.querySelector('.loading');
     if (loadingElement) {
         loadingElement.style.opacity = '0';
-        
+
         // Menambahkan kelas 'hidden' setelah 2 detik
-        setTimeout(function() {
+        setTimeout(function () {
             loadingElement.style.display = 'none';
         }, 2000); // 2000 ms = 2 detik
     }
 
-    document.querySelectorAll('.core .row').forEach(function(row) {
+    document.querySelectorAll('.core .row').forEach(function (row) {
         row.style.display = 'flex';
     });
 });
@@ -27,7 +27,7 @@ candu.innerText = ` ${jeneng}`;
 const bn = document.querySelectorAll('.an');
 
 const anm = document.querySelectorAll('.anm');
-window.addEventListener('scroll',showanm);
+window.addEventListener('scroll', showanm);
 
 showanm();
 function showanm() {
@@ -38,7 +38,7 @@ function showanm() {
 
         if (boxTop < trigger) {
             a.classList.add('show');
-        }  else {
+        } else {
             a.classList.remove('show');
         }
     })
@@ -46,7 +46,7 @@ function showanm() {
 
 
 //buka undangan
-function bukaUndangan () {
+function bukaUndangan() {
     document.querySelector('.core').style.position = 'relative';
     document.querySelector('.aws').style.top = '-100vh';
     document.getElementById('kembang').style.animation = "keluark1 2s ease forwards";
@@ -70,9 +70,9 @@ function bukaUndangan () {
 // simplyCoutdown
 simplyCountdown('.simply-countdown', {
     year: 2024,
-    month: 11, 
-    day: 27, 
-    words: { 
+    month: 11,
+    day: 27,
+    words: {
         days: { singular: 'HARI', plural: 'HARI' },
         hours: { singular: 'JAM', plural: 'JAM' },
         minutes: { singular: 'MENIT', plural: 'MENIT' },
@@ -80,4 +80,38 @@ simplyCountdown('.simply-countdown', {
     }
 });
 
+/**
+ * ========================================
+ *            Komentar orang-orang
+ * ========================================
+ */
+window.addEventListener("DOMContentLoaded", async function () {
+    const listKomentar = document.querySelector('.tempat-komentar');
 
+    function formatTanggal(tanggal) {
+        const date = new Date(tanggal);
+        return new Intl.DateTimeFormat("id-ID", {
+            year: "numeric", month: "long", day: "numeric"
+        }).format(date);
+    }
+
+    /* ! IMPORTANT, CHANGE URL TO YOUR OWN DB ! */
+    const commentsFetch = await fetch("http://localhost:3000/api/comment?appId=67377fed2b3d1e1c31024bf1", {
+        method: "GET",
+        headers: {
+            "Accept": "application/json"
+        }
+    });
+    const comments = await commentsFetch.json();
+
+    for (let komen of comments) {
+        const div = document.createElement("div");
+        div.classList.add("komentar");
+        div.innerHTML = `
+            <h6 class="komentar__header" name="guestName">${komen.name}</h6>
+            <p class="komentar__isi" name="comment">${komen.comment}</p>
+            <p class="komentar__footer" name="footer"><small>${formatTanggal(komen.date)} | ${komen.present ? "Hadir" : "Tidak hadir"}</small></p>`;
+
+        listKomentar.appendChild(div);
+    }
+});

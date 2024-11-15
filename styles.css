@@ -5,7 +5,10 @@
   --shadow: rgba(0, 0, 0, 0.79);
   --gradient: linear-gradient(90deg, #826435, #6C5220);
 }
-html {scroll-behavior: smooth;}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -50,7 +53,7 @@ body {
   height: 100%;
   z-index: 100;
   justify-content: center;
-  background-image:url(assets/img/bg1.jpg);
+  background-image: url(assets/img/bg1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -93,41 +96,73 @@ body {
 
 .core .row #kertas1 {
   transition: 1s ease;
-  animation:kermas1 2s ease forwards, wigglek 2s ease-in-out 2.3s infinite alternate;
+  animation: kermas1 2s ease forwards, wigglek 2s ease-in-out 2.3s infinite alternate;
 }
 
 @keyframes kermas1 {
-  0% {transform: translate(0, -30%); opacity: 0;}
-  100% {transform: translate(0, 1.07%);}
+  0% {
+    transform: translate(0, -30%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 1.07%);
+  }
 }
 
 @keyframes kerkel1 {
-  to {transform: translate(0, -100vw); opacity: 0;}
+  to {
+    transform: translate(0, -100vw);
+    opacity: 0;
+  }
 }
 
 @keyframes wigglek {
-  0%  {transform: translate(0, 1.07%);}
-  50% {transform: translate(0%, 0%);}
-  100%{transform: translate(0, -1.05%);}
+  0% {
+    transform: translate(0, 1.07%);
+  }
+
+  50% {
+    transform: translate(0%, 0%);
+  }
+
+  100% {
+    transform: translate(0, -1.05%);
+  }
 }
 
 @keyframes rotk2 {
-  from  {transform: scale(1.13) rotate(3deg);}
-  to    {transform: scale(1.1) rotate(5deg);}
+  from {
+    transform: scale(1.13) rotate(3deg);
+  }
+
+  to {
+    transform: scale(1.1) rotate(5deg);
+  }
 }
 
 @keyframes kermas2 {
-  0% {transform:translate(0, 25%); opacity: 0;}
-  100% {transform:translate(0, 0) scale(1.13) rotate(3deg); opacity: 1;}
+  0% {
+    transform: translate(0, 25%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1.13) rotate(3deg);
+    opacity: 1;
+  }
 }
 
 @keyframes kerkel2 {
-  to {transform: translateY(-100%); opacity: 0;}
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
 .core .row #kertas2 {
   transition: 1s ease;
-  animation:kermas2 3s ease forwards, rotk2 3s ease 3s infinite alternate;
+  animation: kermas2 3s ease forwards, rotk2 3s ease 3s infinite alternate;
 }
 
 .core .row #lineart {
@@ -135,19 +170,41 @@ body {
   display: flex;
   z-index: 3;
   max-width: 70%;
-  animation: linemas 7s ease  forwards;
+  animation: linemas 7s ease forwards;
 }
 
 @keyframes linemas {
-  0%   {transform: translateY(0); opacity: 0;}
-  30%   {transform: translateY(0); opacity: 0;}
-  100% { transform: translateY(-17%); opacity: 1;}
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  30% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-17%);
+    opacity: 1;
+  }
 }
 
 @keyframes lineout {
-  0% { transform: translateY(-17%); opacity: 1;}
-  23% { transform: translateY(-17%); opacity: 1;}
-  100% { transform: translateY(-17%); opacity: 0;}
+  0% {
+    transform: translateY(-17%);
+    opacity: 1;
+  }
+
+  23% {
+    transform: translateY(-17%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-17%);
+    opacity: 0;
+  }
 }
 
 .core .row #kembang {
@@ -161,32 +218,65 @@ body {
 }
 
 @keyframes anmk1 {
-  0% {transform: scale(1) translate3d(-15%, -15%, 0px);}
-  100% {transform: scale(1.1) translate3d(-13%, -15%, 0px) ;}
+  0% {
+    transform: scale(1) translate3d(-15%, -15%, 0px);
+  }
+
+  100% {
+    transform: scale(1.1) translate3d(-13%, -15%, 0px);
+  }
 }
 
 @keyframes anmasuk1 {
-  0% {transform:translate3d(-100%, -15%, 0px) ;opacity: 0;}
-  100% {transform:translate3d(-15%, -15%, 0px);opacity: 1;}
+  0% {
+    transform: translate3d(-100%, -15%, 0px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(-15%, -15%, 0px);
+    opacity: 1;
+  }
 }
 
 @keyframes anmk2 {
-  0% {transform: scale(-1) translate3d(-15%, -15%, 0px);}
-  100% {transform: scale(-1.1) translate3d(-13%, -15%, 0px);}
+  0% {
+    transform: scale(-1) translate3d(-15%, -15%, 0px);
+  }
+
+  100% {
+    transform: scale(-1.1) translate3d(-13%, -15%, 0px);
+  }
 }
 
 @keyframes anmasuk2 {
-  0% {transform: scale(-1.1) translate3d(-100%, -15%, 0px);opacity: 0;}
-  100% {transform: scale(-1) translate3d(-15%, -15%, 0px);opacity: 1;}
+  0% {
+    transform: scale(-1.1) translate3d(-100%, -15%, 0px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(-1) translate3d(-15%, -15%, 0px);
+    opacity: 1;
+  }
 }
 
 @keyframes keluark1 {
-  to {transform: scale(1) translate3d(-100%, -15%, 0px)}
+  to {
+    transform: scale(1) translate3d(-100%, -15%, 0px)
+  }
 }
 
 @keyframes keluark2 {
-  0% {transform: scale(-1.1) translate3d(-13%, -15%, 0px); display: flex;}
-  100% {transform: scale(-1.1) translate3d(-100%, -15%, 0px);display: none;}
+  0% {
+    transform: scale(-1.1) translate3d(-13%, -15%, 0px);
+    display: flex;
+  }
+
+  100% {
+    transform: scale(-1.1) translate3d(-100%, -15%, 0px);
+    display: none;
+  }
 }
 
 .core .row #kembang2 {
@@ -200,7 +290,7 @@ body {
 
 .core .row #kembang,
 .core .row #kembang2 {
-  filter: drop-shadow(3px 3px 7px  var(--shadow));
+  filter: drop-shadow(3px 3px 7px var(--shadow));
 }
 
 .core .row #tombol {
@@ -215,21 +305,31 @@ body {
   animation: transtomb 4s ease forwards;
 }
 
-.core .row .tamu{
+.core .row .tamu {
   animation: transtomb 4s ease forwards;
 }
 
 @keyframes transtomb {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes ktomb {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
-.core .row #tombol{
+.core .row #tombol {
   display: flex;
   position: absolute;
   width: 75%;
@@ -265,13 +365,29 @@ body {
 }
 
 @keyframes judulm {
-  0% {transform: translate(23%, -100%); opacity: 0;}
-  100% {transform: translate(23%, -143%); opacity: 1;}
+  0% {
+    transform: translate(23%, -100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(23%, -143%);
+    opacity: 1;
+  }
 }
 
 @keyframes judulk {
-  from {transform: translate(23%, -143%); opacity: 1; display: flex;}
-  to {transform: translate(100%, -143%); opacity: 0; display: none}
+  from {
+    transform: translate(23%, -143%);
+    opacity: 1;
+    display: flex;
+  }
+
+  to {
+    transform: translate(100%, -143%);
+    opacity: 0;
+    display: none
+  }
 }
 
 .core .row #textTamu {
@@ -313,10 +429,21 @@ body {
 }
 
 @keyframes mhitam {
-  0% {opacity: 0;}
-  25% {opacity: 1;}
-  75% {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .core .row .slamet #sugengrawuh {
@@ -328,11 +455,30 @@ body {
 }
 
 @keyframes msalam {
-  0%  {opacity: 0; transform: scale(0);}
-  25% {opacity: 0;transform: scale(0.9);}
-  50% {opacity: 1;transform: scale(1);}
-  75% {opacity: 1;transform: scale(1);}
-  100%{opacity: 0;transform: scale(1);}
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  25% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
 
 .core .row .slamet #aksen1 {
@@ -344,11 +490,25 @@ body {
 }
 
 @keyframes maksen1 {
-  0% {opacity: 0;}
-  10% {opacity: 0;}
-  40% {opacity: 0;}
-  90% {opacity: 1;}
-  100% {opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .core .row .slamet #akstitan {
@@ -373,11 +533,25 @@ body {
 }
 
 @keyframes aksara {
-    0% {opacity: 0;}
-    10% {opacity: 1;}
-    40% {opacity: 0;}
-    90% {opacity: 1;}
-    100% {opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 
@@ -423,8 +597,15 @@ body {
 }
 
 @keyframes masukjudul {
-  0% {transform: translate(0,-23%); opacity: 0;}
-  100% {transform: translate(0,0); opacity: 1;}
+  0% {
+    transform: translate(0, -23%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 
 .core .titandannando #scroll-btn {
@@ -440,6 +621,7 @@ body {
   opacity: 0;
   animation: masukjudul 2s ease 11s forwards;
 }
+
 .core .titandannando a#scroll-btn:before {
   position: absolute;
   content: "";
@@ -453,15 +635,18 @@ body {
   border-radius: 50%;
   animation: move-down 2s infinite;
 }
+
 @keyframes move-down {
   80% {
     opacity: 0.5;
   }
+
   100% {
     transform: translateY(2.5em);
     opacity: 0;
   }
 }
+
 /* akad-section */
 .akad {
   position: relative;
@@ -514,11 +699,12 @@ body {
 }
 
 
-.akad .row .page1 .judul{
+.akad .row .page1 .judul {
   display: flex;
   padding: 25% 0 3%;
   width: 60%;
 }
+
 .akad .row .page1 .bar {
   display: flex;
   width: 90%;
@@ -528,17 +714,20 @@ body {
   border-bottom: 0.5px double var(--pth);
   align-items: center;
 }
+
 .akad .row .page1 .bar .tg,
 .akad .row .page1 .bar .wk {
   display: flex;
   height: 50%;
 }
-.akad .row .page1 .paragraf{
+
+.akad .row .page1 .paragraf {
   display: flex;
   text-align: justify;
   text-align-last: center;
   width: 90%;
 }
+
 .akad .row .page1 p.paragraf {
   font-size: 53%;
   font-family: "Bodoni Moda", serif;
@@ -556,6 +745,7 @@ body {
   border-right: 5px double var(--pth);
   border-left: 5px double var(--pth);
 }
+
 .akad .row .page2 .judul {
   display: flex;
   width: 91%;
@@ -564,7 +754,8 @@ body {
   border-bottom: 1px solid var(--pth);
   padding: 0% 2.5%;
 }
-.akad .row .page2 .judul h1{
+
+.akad .row .page2 .judul h1 {
   margin: 3% 0;
   font-family: "Bodoni Moda", serif;
   color: var(--pth);
@@ -572,17 +763,20 @@ body {
   letter-spacing: 5px;
   line-height: 100%;
 }
+
 .akad .row .page2 .info {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
+
 .akad .row .page2 .info .peta {
   display: flex;
   flex: 70%;
   justify-content: center;
   align-items: center;
 }
+
 .akad .row .page2 .info .peta #maps {
   width: 95%;
   height: 93%;
@@ -593,23 +787,26 @@ body {
   text-align: center;
   margin-right: 2%;
 }
+
 .akad .row .page2 .info .waktu h3,
 .akad .row .page3 .info .resepsi .waktu h3 {
   margin: 0;
   color: var(--pth);
-  font-family:"Bodoni Moda", serif;
+  font-family: "Bodoni Moda", serif;
   letter-spacing: 1px;
   font-weight: 600;
   font-size: 150%;
   border-bottom: 0.1px solid var(--pth);
 }
+
 .akad .row .page2 .info .waktu h4,
 .akad .row .page3 .info .resepsi .waktu h4 {
   margin: 0;
   color: var(--pth);
-  font-family:"Bodoni Moda", serif;
+  font-family: "Bodoni Moda", serif;
   font-size: 120%;
 }
+
 .akad .row .page2 .info .waktu .pukul,
 .akad .row .page3 .info .resepsi .waktu .pukul {
   display: flex;
@@ -618,6 +815,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
 .akad .row .page2 .info .waktu .pukul h5,
 .akad .row .page3 .info .resepsi .waktu .pukul h5 {
   display: flex;
@@ -627,19 +825,21 @@ body {
   font-family: "Bodoni Moda", serif;
   font-weight: 200;
   color: var(--pth);
-  border: 0.1pt solid  var(--pth);
+  border: 0.1pt solid var(--pth);
   align-items: center;
   justify-content: center;
 }
+
 .akad .row .page2 .info .waktu .pukul h4,
 .akad .row .page3 .info .resepsi .waktu .pukul h4 {
   padding: 0 5%;
-  margin:0 3%;
-  border-left: 0.5px solid  var(--pth);
-  border-right: 0.5px solid  var(--pth);
+  margin: 0 3%;
+  border-left: 0.5px solid var(--pth);
+  border-right: 0.5px solid var(--pth);
 }
+
 .akad .row .page2 .info .waktu p,
-.akad .row .page3 .info .resepsi .waktu p{
+.akad .row .page3 .info .resepsi .waktu p {
   margin: 0;
   font-family: "Bodoni Moda", serif;
   font-size: 70%;
@@ -647,11 +847,12 @@ body {
   text-align: justify;
   text-align-last: center;
   color: var(--pth);
-  padding: 3% 0 ;
+  padding: 3% 0;
   border-bottom: 0.3px solid var(--pth);
 }
-.akad .row .page2 .info .waktu button, 
-.akad .row .page3 .info .resepsi .waktu button{
+
+.akad .row .page2 .info .waktu button,
+.akad .row .page3 .info .resepsi .waktu button {
   width: 85%;
   padding: 6% 0;
   margin: 9% 0;
@@ -674,11 +875,13 @@ body {
   border: 5px double var(--pth);
   border-top: none;
 }
+
 .akad .row .page3 .info {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .akad .row .page3 .info .resepsi {
   display: flex;
   flex: 15%;
@@ -687,6 +890,7 @@ body {
   text-align: center;
   color: var(--pth);
 }
+
 .akad .row .page3 .info .resepsi h2 {
   font-family: "Bodoni Moda", serif;
   font-size: 213%;
@@ -694,15 +898,18 @@ body {
   padding: 7% 0 3%;
   margin: 0;
 }
+
 .akad .row .page3 .info .resepsi .waktu {
   display: flex;
   flex-direction: column;
   padding: 3%;
   border: 1px solid;
 }
+
 .akad .row .page3 .info .resepsi .waktu button {
   align-self: center;
 }
+
 .akad .row .page3 .info .aksen {
   padding-top: 5%;
   display: flex;
@@ -712,18 +919,21 @@ body {
   text-align-last: center;
   color: var(--pth);
 }
+
 .akad .row .page3 .info .aksen .baris1 {
   display: flex;
   flex-direction: row;
   margin: 2%;
 }
+
 .akad .row .page3 .info .aksen .baris1 .gambar {
   height: fit-content;
   width: 60%;
   padding: 3%;
   align-self: center;
 }
-.akad .row .page3 .info .aksen .baris1 p{
+
+.akad .row .page3 .info .aksen .baris1 p {
   display: flex;
   font-family: "Bodoni Moda", serif;
   font-weight: 200;
@@ -731,12 +941,14 @@ body {
   font-size: 8px;
   margin: 0;
 }
+
 .akad .row .page3 .info .aksen p {
   font-size: 8px;
   margin: 2%;
   font-family: "Bodoni Moda", serif;
   font-weight: 200;
 }
+
 .akad .row .page3 .info .aksen h5 {
   margin: 3% auto 0;
   padding: 3% 9% 0;
@@ -751,6 +963,7 @@ body {
   justify-content: center;
   padding: 2% 0 10%;
 }
+
 .akad .row .page3 .penutup p {
   width: 95%;
   color: var(--pth);
@@ -759,7 +972,7 @@ body {
   font-size: 9px;
   letter-spacing: 1px;
   text-align: justify;
-  border-top: 1px solid ;
+  border-top: 1px solid;
 }
 
 .akad .row .countdown {
@@ -769,7 +982,7 @@ body {
   justify-content: space-around;
   align-items: center;
   color: var(--pth);
-  border: 5px  double;
+  border: 5px double;
 }
 
 
@@ -822,13 +1035,13 @@ body {
   display: flex;
   position: relative;
   width: 50%;
-  padding: 13%  0;
+  padding: 13% 0;
   animation: outfadeB 2s ease forwards;
 
 }
 
 .couple .row #namaTitan,
-.couple .row #namaNando{
+.couple .row #namaNando {
   display: flex;
   position: relative;
   width: 70%;
@@ -856,8 +1069,12 @@ body {
 }
 
 @keyframes outfadeB {
-  to {transform: translateY(50%); opacity: 0;}
+  to {
+    transform: translateY(50%);
+    opacity: 0;
+  }
 }
+
 /* &&& */
 .core .row #batasDan {
   display: flex;
@@ -870,7 +1087,7 @@ body {
 .quote {
   display: flex;
   position: relative;
-  z-index:1;
+  z-index: 1;
   width: 100%;
   background-color: var(--pth);
   justify-content: center;
@@ -903,7 +1120,8 @@ body {
   left: 0;
   animation: outfadeB 2s ease forwards;
 }
-.quote .row #kembangq.anm.show  {
+
+.quote .row #kembangq.anm.show {
   animation: anmasuk1 3s ease forwards, anmk1 3.5s ease-in-out 3s infinite alternate;
 }
 
@@ -915,6 +1133,7 @@ body {
   animation: outfadeB 2s ease forwards;
   overflow-x: hidden;
 }
+
 .quote .row #kembangq2 {
   animation: anmasuk2 3s ease forwards, anmk2 3.7s ease-in-out 3s infinite alternate;
 }
@@ -959,15 +1178,22 @@ body {
   animation: outfadeB 2s ease forwards;
 }
 
-.quote .row #tnl.anm.show ,
-.quote .row #stampel.anm.show ,
+.quote .row #tnl.anm.show,
+.quote .row #stampel.anm.show,
 .quote .row #ucpan.anm.show {
   animation: anfadeB 2s ease forwards;
 }
 
 @keyframes anfadeB {
-  from {transform: translateY(50%); opacity: 0;}
-  to {transform: translateY(0); opacity: 1;}
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* story-section */
@@ -991,18 +1217,21 @@ body {
   display: flex;
   width: 30%;
 }
+
 .story .row #giftf {
   display: flex;
   width: 55%;
   padding: 3% 12% 5%;
   border-bottom: 2px solid var(--coklat);
 }
+
 .story .row .wed {
   display: flex;
   width: 95%;
   /* background-color: #232325; */
   padding: 10% 0;
 }
+
 .story .row .wed .foto {
   display: flex;
   flex: 20%;
@@ -1011,12 +1240,14 @@ body {
   align-items: center;
   transform: translateX(-50%);
 }
+
 .story .row .wed .foto #frame {
   position: absolute;
   display: flex;
   width: fit-content;
   height: 100%;
 }
+
 .story .row .wed .foto::after {
   content: '';
   display: flex;
@@ -1027,6 +1258,7 @@ body {
   background-size: cover;
   background-position: -110px;
 }
+
 .story .row .wed .hadiah {
   display: flex;
   justify-content: center;
@@ -1038,6 +1270,7 @@ body {
   font-family: "Bodoni Moda", serif;
   color: var(--coklat);
 }
+
 .story .row .wed .hadiah p {
   font-size: 8px;
   font-weight: 200;
@@ -1048,9 +1281,11 @@ body {
   border-bottom: 1px solid;
   text-align-last: center;
 }
+
 .story .row .wed .hadiah span {
   font-weight: 800;
 }
+
 .story .row .wed .hadiah .alamat {
   display: flex;
   /* background-color: red; */
@@ -1058,11 +1293,13 @@ body {
   margin: 3% 0;
   border: 1px solid;
 }
+
 .story .row .wed .hadiah .alamat #hd {
   width: 50%;
   align-self: center;
   padding: 3%;
 }
+
 .story .row .wed .hadiah .alamat h5 {
   display: flex;
   font-size: 8px;
@@ -1074,6 +1311,7 @@ body {
   border-top: 1px solid;
   border-bottom: 1px solid;
 }
+
 .story .row .wed .hadiah .atmtitan,
 .story .row .wed .hadiah .atmnando {
   display: flex;
@@ -1084,6 +1322,7 @@ body {
   border: 1px solid;
   color: var(--coklat);
 }
+
 .story .row .wed .hadiah .atmtitan #mandiri,
 .story .row .wed .hadiah .atmnando #bca {
   display: flex;
@@ -1092,7 +1331,8 @@ body {
   margin: 3%;
   height: fit-content;
 }
-.story .row .wed .hadiah .atmtitan #noT, 
+
+.story .row .wed .hadiah .atmtitan #noT,
 .story .row .wed .hadiah .atmnando #noN {
   display: flex;
   flex: 70%;
@@ -1100,19 +1340,22 @@ body {
   width: 90%;
   align-items: center;
 }
-.story .row .wed .hadiah .atmtitan #noT h3, 
-.story .row .wed .hadiah .atmnando #noN h3{
+
+.story .row .wed .hadiah .atmtitan #noT h3,
+.story .row .wed .hadiah .atmnando #noN h3 {
   font-size: 8px;
   margin: 0;
   padding-top: 4%;
 }
-.story .row .wed .hadiah .atmtitan #noT h2, 
+
+.story .row .wed .hadiah .atmtitan #noT h2,
 .story .row .wed .hadiah .atmnando #noN h2 {
   font-size: 13px;
   margin: 0;
   letter-spacing: 2px;
 }
-.story .row .wed .hadiah .atmtitan #noT button, 
+
+.story .row .wed .hadiah .atmtitan #noT button,
 .story .row .wed .hadiah .atmnando #noN button {
   font-family: "Bodoni Moda";
   background-color: var(--coklat);
@@ -1201,18 +1444,24 @@ body {
   width: 95%;
   height: 90%;
   border: 1px solid;
-  color: var(
-  --pth);
+  color: var(--pth);
   font-family: 'Bodoni Moda';
-  text-align: center;
-  align-items: center;
+  /* make un-resizeable */
+  resize: none;
 }
+
+/* for placeholder */
+.konfir-form::placeholder {
+  opacity: 0.5;
+  color: var(--pth);
+  font-family: 'Bodoni Moda';
+}
+
 .RSVP .row button {
   width: 100%;
   background-color: var(--pth);
   border: transparent;
 }
-
 
 .RSVP .row .tempat-komentar {
   width: 100%;
@@ -1222,8 +1471,6 @@ body {
   justify-content: center;
   background-color: darkgray;
 }
-
-
 
 #data-tbody {
   display: flex;
@@ -1317,6 +1564,7 @@ footer .row h3 {
   font-weight: 200;
   margin: 0;
 }
+
 footer .row a {
   color: var(--pth);
   text-decoration: none;
