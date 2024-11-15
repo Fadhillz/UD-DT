@@ -18,6 +18,14 @@
   </head>
 
   <body>
+
+    <!-- Loading -->
+    <section class="loading" id="loading">
+      <div class="s">
+        <img src="assets/tnl.png">
+      </div>
+    </section>
+
     <!-- coreSection -->
     <section class="core" id="core" >
       <div class="aws" id="asw"></div>
@@ -65,7 +73,7 @@
     <!-- coupleSection -->
     <section class="couple" id="couple" hidden>
       <div class="row">
-        <p id="kalpembuka">Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan. Ya Allah rahmatilah pernikahan kami :</p>
+        <p id="kalpembuka" class="anm">Maha suci Allah yang telah menciptakan mahluk-Nya berpasang-pasangan. Ya Allah rahmatilah pernikahan kami :</p>
         <!-- Titania Nurul Anisa -->
         <img src="assets/img/imgtitania.png" alt="Titania" id="fotoTitania" class="anm">
         <object data="assets/svg/namatitan.svg" type="image/svg+xml" id="namaTitan" class="anm"></object>
@@ -81,8 +89,8 @@
     <!-- endCoupleSection -->
 
     <!-- akadSection -->
-    <section class="akad" id="akad" hidden>
-      <div class="row ">
+    <section class="akad anm" id="akad" hidden>
+      <div class="row">
         <!-- Page Pertama (judul) -->
         <div class="page1">
           <object data="assets/svg/akadresepsi.svg" type="image/svg+xml" class="judul"></object>
@@ -204,7 +212,6 @@
         <form
           class="konfir"
           method="POST"
-          action="https://script.google.com/macros/s/AKfycby3G_WGvonFtLX5B2rIRZBbPyHi_7yLkCos1rKDClIoTKvKAKDhOeodMePsiSAZiXMVyg/exec"
         >
           <div class="konfir-nama">
             <input
@@ -266,6 +273,7 @@
       </div>
     </footer>
 
+    <!-- js -->
     <script src="scripts.js"></script>
 
   </body>

@@ -4,12 +4,12 @@
 }
     
 .simply-countdown>.simply-section {
-    height:50px;
-    padding: 30px 15px;
+    height: 40px;
+    padding: 14px 5px;
     display:flex;
     align-items: center;
     float:left;
-    margin: 15px 0;
+    margin: 10px 0px;
     border-bottom: 3px double var(--pth);
     border-top: 3px double var(--pth);
 }
@@ -17,16 +17,16 @@
 .simply-countdown>.simply-section .simply-amount,
 .simply-countdown>.simply-section .simply-word{
     display:flex;
-    font-size: 30px;
+    font-size: 20px;
     text-align:center;
     font-family: 'Bodoni Moda';
     color: var(--pth);
     border-left: 1px solid var(--pth);
-    width: 100px;
+    width: 75px;
     justify-content: center;
     border-right: 1px solid var(--pth);
 }
 
 .simply-countdown>.simply-section .simply-word {
-    font-size: 15px;
+    font-size: 13px;
 }
