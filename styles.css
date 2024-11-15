@@ -15,6 +15,143 @@ body {
   background-color: var(--htm);
 }
 
+
+/* Media Query 768px (tablet) */
+@media (max-width: 768px) {
+  /* CSS untuk tablet dan smartphone landscape */
+
+  .core .row #kertas1, .core .row #kertas2 {
+    width: 85%;
+  }
+
+  .core .row #tombol {
+    width: 68%;
+  }
+
+  .core .row #textTamu {
+    width: 65%;
+  }
+
+  .core .row #textJudul {
+    width: 45%;
+  }
+
+  .core .row .slamet #sugengrawuh {
+    width: 74%;
+  }
+
+  .core .row .slamet #aksen1 {
+    height: 50%;
+  }
+
+  .couple .row #fotoTitania, .couple .row #fotoNando {
+    width: 40%;
+    padding: 2% 0
+  }
+
+  .couple .row #kalpembuka {
+    font-size: 20px;
+  }
+
+  .akad .row .page1, .akad .row .page2, .akad .row .page3, .akad .row .countdown {
+    width: 82%;
+  }
+
+  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
+    font-size: 40px;
+    width: 126px;
+  }
+
+  .simply-countdown>.simply-section {
+    height: 85px;
+  }
+
+  .akad .row .page3 .info .aksen {
+    flex: 7%;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 .gambar {
+    width: 50%;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 p , .akad .row .page3 .info .aksen p{
+    font-size: 11px;
+  }
+
+  .akad .row .page2 .info .waktu h3, .akad .row .page3 .info .resepsi .waktu h3 {
+    font-size: 286%;
+  }
+
+  .akad .row .page2 .info .waktu h4, .akad .row .page3 .info .resepsi .waktu h4 {
+    font-size: 155%;
+  }
+
+  .akad .row .page2 .info .waktu p, .akad .row .page3 .info .resepsi .waktu p {
+    font-size: 90%;
+  }
+
+  .akad .row .page2 .info .waktu button, .akad .row .page3 .info .resepsi .waktu button,
+  .akad .row .page3 .info .aksen h5 {
+    font-size: 21px;
+  }
+
+  .akad .row .page3 .penutup p {
+    font-size: 14px;
+  }
+
+  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
+    font-size: 45px;
+    width: 135px;
+  }
+
+  .simply-countdown>.simply-section {
+    height: 100px;
+  }
+
+  .story .row .wed .hadiah p {
+    font-size: 20px;
+  }
+
+  .story .row .wed .foto::after {
+    width: 166%;
+    height: 91%;
+  }
+
+  .story .row .wed .hadiah .alamat h5 {
+    font-size: 19px;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
+    font-size: 60%;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h2, .story .row .wed .hadiah .atmnando #noN h2 {
+    font-size: 150%;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT button, .story .row .wed .hadiah .atmnando #noN button {
+    font-size: 95%;
+  }
+
+  .RSVP .row .konfir-form {
+    height: 100%;
+  }
+
+  .RSVP .row .konfir-kirim {
+    width: 98%;
+    height: 17%;
+  }
+
+  .gift .row #penutup {
+    padding: 20% 0 51%;
+  }
+
+  .gift .row #layerb {
+    width: 85%;
+  }
+
+}
+
 /* Loading Section */
 .loading {
   display: flex;
@@ -1404,7 +1541,7 @@ footer .row a {
   text-decoration: none;
 }
 
-/* end media query 480px */
+
 @media (max-width: 320px) {
 
   .core .row #kembang,
@@ -1463,147 +1600,5 @@ footer .row a {
   .story .row .wed .foto #frame {
     transform: translateX(-23px);
   }
-
-}
-
-/* Media Query 768px (tablet) */
-@media (max-width: 768px) {
-  /* CSS untuk tablet dan smartphone landscape */
-
-  .core .row #kertas1, .core .row #kertas2 {
-    width: 85%;
-  }
-
-  .core .row #tombol {
-    width: 68%;
-  }
-
-  .core .row #textTamu {
-    width: 65%;
-  }
-
-  .core .row #textJudul {
-    width: 45%;
-  }
-
-  .core .row .slamet #sugengrawuh {
-    width: 74%;
-  }
-
-  .core .row .slamet #aksen1 {
-    height: 50%;
-  }
-
-  .couple .row #fotoTitania, .couple .row #fotoNando {
-    width: 40%;
-    padding: 2% 0
-  }
-
-  .couple .row #kalpembuka {
-    font-size: 20px;
-  }
-
-  .akad .row .page1, .akad .row .page2, .akad .row .page3, .akad .row .countdown {
-    width: 82%;
-  }
-
-  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
-    font-size: 40px;
-    width: 126px;
-  }
-
-  .simply-countdown>.simply-section {
-    height: 85px;
-  }
-
-  .akad .row .page3 .info .aksen {
-    flex: 7%;
-  }
-
-  .akad .row .page3 .info .aksen .baris1 .gambar {
-    width: 50%;
-  }
-
-  .akad .row .page3 .info .aksen .baris1 p , .akad .row .page3 .info .aksen p{
-    font-size: 11px;
-  }
-
-  .akad .row .page2 .info .waktu h3, .akad .row .page3 .info .resepsi .waktu h3 {
-    font-size: 286%;
-  }
-
-  .akad .row .page2 .info .waktu h4, .akad .row .page3 .info .resepsi .waktu h4 {
-    font-size: 155%;
-  }
-
-  .akad .row .page2 .info .waktu p, .akad .row .page3 .info .resepsi .waktu p {
-    font-size: 90%;
-  }
-
-  .akad .row .page2 .info .waktu button, .akad .row .page3 .info .resepsi .waktu button,
-  .akad .row .page3 .info .aksen h5 {
-    font-size: 21px;
-  }
-
-  .akad .row .page3 .penutup p {
-    font-size: 14px;
-  }
-
-  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
-    font-size: 45px;
-    width: 135px;
-  }
-
-  .simply-countdown>.simply-section {
-    height: 100px;
-  }
-
-  .story .row .wed .hadiah p {
-    font-size: 20px;
-  }
-
-  .story .row .wed .foto::after {
-    width: 166%;
-    height: 91%;
-  }
-
-  .story .row .wed .hadiah .alamat h5 {
-    font-size: 19px;
-  }
-
-  .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
-    font-size: 60%;
-  }
-
-  .story .row .wed .hadiah .atmtitan #noT h2, .story .row .wed .hadiah .atmnando #noN h2 {
-    font-size: 150%;
-  }
-
-  .story .row .wed .hadiah .atmtitan #noT button, .story .row .wed .hadiah .atmnando #noN button {
-    font-size: 95%;
-  }
-
-  .RSVP .row .konfir-form {
-    height: 100%;
-  }
-
-  .RSVP .row .konfir-kirim {
-    width: 98%;
-    height: 17%;
-  }
-
-  .gift .row #penutup {
-    padding: 20% 0 51%;
-  }
-
-  .gift .row #layerb {
-    width: 85%;
-  }
-
-
-
-
-
-
 
 }
