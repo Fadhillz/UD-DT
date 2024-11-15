@@ -245,7 +245,7 @@ body {
   position: absolute;
   z-index: 9;
   font-family: "Corinthia", serif;
-  transform: translateY(455%);
+  transform: translateY(428%);
   background-color: transparent;
   border-color: transparent;
   color: var(--pth);
@@ -260,7 +260,7 @@ body {
   position: absolute;
   z-index: 9;
   width: 55%;
-  transition: 1s ease;
+  transition: 2s ease;
   animation: judulm 2s ease forwards;
 }
 
@@ -608,7 +608,7 @@ body {
   margin: 0;
   color: var(--pth);
   font-family:"Bodoni Moda", serif;
-  font-size: 120%;
+  font-size: 95%;
 }
 .akad .row .page2 .info .waktu .pukul,
 .akad .row .page3 .info .resepsi .waktu .pukul {
@@ -728,11 +728,11 @@ body {
   font-family: "Bodoni Moda", serif;
   font-weight: 200;
   flex: 50%;
-  font-size: 8px;
+  font-size: 7px;
   margin: 0;
 }
 .akad .row .page3 .info .aksen p {
-  font-size: 8px;
+  font-size: 7px;
   margin: 2%;
   font-family: "Bodoni Moda", serif;
   font-weight: 200;
@@ -832,7 +832,6 @@ body {
   display: flex;
   position: relative;
   width: 70%;
-  padding: 7% 0;
   animation: outfadeB 2s ease forwards;
 }
 
@@ -990,17 +989,31 @@ body {
 .story .row #line {
   display: flex;
   width: 30%;
+  transform: translateY(50%);
+  opacity: 0;
 }
+
 .story .row #giftf {
   display: flex;
   width: 55%;
   padding: 3% 12% 5%;
   border-bottom: 2px solid var(--coklat);
+  transform: translateY(50%);
+  opacity: 0;
 }
+
+@keyframes animateto {
+  to {transform: translateY(0); opacity: 1;}
+}
+.story .row #line.anm.show ,
+.story .row #giftf.anm.show {
+  animation: animateto 2s ease forwards;
+}
+
+
 .story .row .wed {
   display: flex;
   width: 95%;
-  /* background-color: #232325; */
   padding: 10% 0;
 }
 .story .row .wed .foto {
@@ -1009,8 +1022,15 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  transform: translateX(-50%);
+  transform: translateX(-90%);
+  opacity: 0;
+  transition: 2s ease;
 }
+.story .row .wed .foto.anm.show {
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
 .story .row .wed .foto #frame {
   position: absolute;
   display: flex;
@@ -1034,10 +1054,18 @@ body {
   flex-direction: column;
   margin-left: 5%;
   flex: 54%;
-  /* background-color: #daceb9; */
   font-family: "Bodoni Moda", serif;
   color: var(--coklat);
+  transform: translateY(30%);
+  opacity: 1;
+  transition: 3s ease;
 }
+
+.story .row .wed .hadiah.anm.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .story .row .wed .hadiah p {
   font-size: 8px;
   font-weight: 200;
@@ -1053,10 +1081,12 @@ body {
 }
 .story .row .wed .hadiah .alamat {
   display: flex;
-  /* background-color: red; */
   flex-direction: column;
+  width: 100%;
   margin: 3% 0;
   border: 1px solid;
+  align-items: center;
+  justify-content: center;
 }
 .story .row .wed .hadiah .alamat #hd {
   width: 50%;
@@ -1066,8 +1096,8 @@ body {
 .story .row .wed .hadiah .alamat h5 {
   display: flex;
   font-size: 8px;
-  align-self: center;
   text-align: center;
+  justify-content: center;
   margin: 0 0 10%;
   padding: 3% 0;
   width: 90%;
@@ -1190,7 +1220,6 @@ body {
 
 .RSVP .row .konfir-kirim {
   display: flex;
-  background-color: purple;
   width: 97%;
   height: 11%;
 }
@@ -1253,26 +1282,64 @@ body {
   z-index: 2;
   position: absolute;
   width: 100%;
+  transform: translateY(70%);
+  opacity: 0;
+  transition: 2s ease;
+}
+
+.gift .row #layerb.anm.show {
   transform: translateY(50%);
+  opacity: 1;
+  animation: naikturunbunga 10s ease-in-out infinite alternate;
+}
+
+@keyframes naikturunbunga {
+  0% {transform: translateY(50%);}
+  25% {transform: translateY(65%);}
+  75% {transform: translateY(43%);}
+  100% {transform: translateY(63%);}
 }
 
 .gift .row #penutup {
   display: flex;
   width: 50%;
   padding: 20% 0 67%;
+  scale: 0.7;
+  opacity: 0;
+  transition: 3s ease;
+}
+
+.gift .row #penutup.anm.show {
+  scale: 1;
+  opacity: 1;
 }
 
 .gift .row #thewedding {
   display: flex;
   width: 35%;
   padding: 3%;
+  transform: translateX(0);
+  opacity: 0;
+  transition: 2s ease;
+}
+
+.gift .row #thewedding.anm.show {
   transform: translateX(70%);
+  opacity: 1;
 }
 
 .gift .row #and {
   display: flex;
   width: 40%;
   padding: 2%;
+  transform: translateX(-30%);
+  opacity: 0;
+  transition: 3s ease;
+}
+
+.gift .row #and.anm.show {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .gift .row #Nandoo {
@@ -1280,14 +1347,28 @@ body {
   z-index: 3;
   width: 70%;
   padding: 1%;
+  transform: translateX(-15%);
+  opacity: 0;
+  transition: 2s linear;
+}
+
+.gift .row #Nandoo.anm.show {
   transform: translateX(15%);
+  opacity: 1;
 }
 
 .gift .row #Titaniaa {
   display: flex;
   z-index: 4;
   width: 80%;
+  transform: translateX(10%);
+  opacity: 0;
+  transition: 2s ease;
+}
+
+.gift .row #Titaniaa.anm.show {
   transform: translateX(-10%);
+  opacity: 1;
 }
 
 
@@ -1296,6 +1377,7 @@ footer {
   display: flex;
   background-color: var(--htm);
   font-size: 9px;
+  height: 10vh;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -1320,4 +1402,208 @@ footer .row h3 {
 footer .row a {
   color: var(--pth);
   text-decoration: none;
+}
+
+/* end media query 480px */
+@media (max-width: 320px) {
+
+  .core .row #kembang,
+  .quote .row #kembangq {
+    top: -40px;
+    left: -40px;
+  }
+
+  .core .row #kembang2,
+  .quote .row #kembangq {
+    right: -40px;
+    bottom: -40px;
+  }
+
+  .core .titandannando #scroll-btn {
+    bottom: 3.25em;
+  }
+
+  .akad .row .page2 .judul h1 {
+    font-size: 205%;
+  }
+
+  .akad .row .page2 .info .waktu h4, .akad .row .page3 .info .resepsi .waktu h4 {
+    font-size: 75%;
+  }
+
+  .akad .row .page2 .info .waktu .pukul h5, .akad .row .page3 .info .resepsi .waktu .pukul h5 {
+    font-size: 10px;
+  }
+
+  .akad .row .page2 .info .waktu p, .akad .row .page3 .info .resepsi .waktu p {
+    font-size: 60%;
+  }
+
+  .akad .row .page2 .info .waktu button, .akad .row .page3 .info .resepsi .waktu button {
+    font-size: 10px;
+  }
+
+  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
+    font-size: 12px;
+    width: 60px;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 p {
+    font-size: 10px;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 .gambar {
+    width: 49%;
+  }
+
+  .story .row .wed .hadiah {
+    flex: 60%
+  }
+
+  .story .row .wed .foto #frame {
+    transform: translateX(-23px);
+  }
+
+}
+
+/* Media Query 768px (tablet) */
+@media (max-width: 768px) {
+  /* CSS untuk tablet dan smartphone landscape */
+
+  .core .row #kertas1, .core .row #kertas2 {
+    width: 85%;
+  }
+
+  .core .row #tombol {
+    width: 68%;
+  }
+
+  .core .row #textTamu {
+    width: 65%;
+  }
+
+  .core .row #textJudul {
+    width: 45%;
+  }
+
+  .core .row .slamet #sugengrawuh {
+    width: 74%;
+  }
+
+  .core .row .slamet #aksen1 {
+    height: 50%;
+  }
+
+  .couple .row #fotoTitania, .couple .row #fotoNando {
+    width: 40%;
+    padding: 2% 0
+  }
+
+  .couple .row #kalpembuka {
+    font-size: 20px;
+  }
+
+  .akad .row .page1, .akad .row .page2, .akad .row .page3, .akad .row .countdown {
+    width: 82%;
+  }
+
+  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
+    font-size: 40px;
+    width: 126px;
+  }
+
+  .simply-countdown>.simply-section {
+    height: 85px;
+  }
+
+  .akad .row .page3 .info .aksen {
+    flex: 7%;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 .gambar {
+    width: 50%;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 p , .akad .row .page3 .info .aksen p{
+    font-size: 11px;
+  }
+
+  .akad .row .page2 .info .waktu h3, .akad .row .page3 .info .resepsi .waktu h3 {
+    font-size: 286%;
+  }
+
+  .akad .row .page2 .info .waktu h4, .akad .row .page3 .info .resepsi .waktu h4 {
+    font-size: 155%;
+  }
+
+  .akad .row .page2 .info .waktu p, .akad .row .page3 .info .resepsi .waktu p {
+    font-size: 90%;
+  }
+
+  .akad .row .page2 .info .waktu button, .akad .row .page3 .info .resepsi .waktu button,
+  .akad .row .page3 .info .aksen h5 {
+    font-size: 21px;
+  }
+
+  .akad .row .page3 .penutup p {
+    font-size: 14px;
+  }
+
+  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
+    font-size: 45px;
+    width: 135px;
+  }
+
+  .simply-countdown>.simply-section {
+    height: 100px;
+  }
+
+  .story .row .wed .hadiah p {
+    font-size: 20px;
+  }
+
+  .story .row .wed .foto::after {
+    width: 166%;
+    height: 91%;
+  }
+
+  .story .row .wed .hadiah .alamat h5 {
+    font-size: 19px;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
+    font-size: 60%;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h2, .story .row .wed .hadiah .atmnando #noN h2 {
+    font-size: 150%;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT button, .story .row .wed .hadiah .atmnando #noN button {
+    font-size: 95%;
+  }
+
+  .RSVP .row .konfir-form {
+    height: 100%;
+  }
+
+  .RSVP .row .konfir-kirim {
+    width: 98%;
+    height: 17%;
+  }
+
+  .gift .row #penutup {
+    padding: 20% 0 51%;
+  }
+
+  .gift .row #layerb {
+    width: 85%;
+  }
+
+
+
+
+
+
+
 }

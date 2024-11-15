@@ -16,7 +16,6 @@ window.addEventListener('load', function() {
     });
 });
 
-
 const urlParam = new URLSearchParams(window.location.search);
 const jeneng = urlParam.get('to') || '';
 
@@ -43,7 +42,6 @@ function showanm() {
         }
     })
 }
-
 
 //buka undangan
 function bukaUndangan () {
@@ -80,4 +78,58 @@ simplyCountdown('.simply-countdown', {
     }
 });
 
+// buka ig
+function bukaigtitan() {
+    window.open("https://www.instagram.com/nihtitan/", "_blank");
+}
 
+function bukaignando() {
+    window.open("https://www.instagram.com/mdwifernando.98/", "_blank");
+}
+
+function bukaAkad() {
+    window.open("https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NDAwY2ZtdWw4bGUwbjFmb2JxYThybXU5cW8gMGUwYzU0ZGVkNjQwNjU2Y2U3NzA4N2Y1MGMyNjVjYTQ2MGViMDBjMzU0MzIxMWUxZGIyY2M3NTM1NDRiMGVhYkBn&tmsrc=0e0c54ded640656ce77087f50c265ca460eb00c3543211e1db2cc753544b0eab%40group.calendar.google.com", "_blank");
+}
+
+function bukaResepsi() {
+    window.open("https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MG1naDZoYThtb2szaXYwNWcxcWU4b2g3ZXQgMGUwYzU0ZGVkNjQwNjU2Y2U3NzA4N2Y1MGMyNjVjYTQ2MGViMDBjMzU0MzIxMWUxZGIyY2M3NTM1NDRiMGVhYkBn&tmsrc=0e0c54ded640656ce77087f50c265ca460eb00c3543211e1db2cc753544b0eab%40group.calendar.google.com", "_blank");
+}
+
+function salinmandiri() {
+    // Nomor yang ingin disalin
+    const numbermandiri = "1140021939205";
+
+    // Menggunakan Clipboard API untuk menyalin teks
+    navigator.clipboard.writeText(numbermandiri)
+        .then(() => {
+            // Menampilkan notifikasi jika sukses
+            const notification = document.getElementById("notification");
+            notification.style.display = "block";
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 2000); // Menyembunyikan notifikasi setelah 2 detik
+        })
+        .catch(err => {
+            console.error("Gagal menyalin teks ke clipboard: ", err);
+    });
+}
+
+
+function salinbca() {
+    // Nomor yang ingin disalin
+    const numberbca = "4300533413";
+
+    // Menggunakan Clipboard API untuk menyalin teks
+    navigator.clipboard.writeText(numberbca)
+        .then(() => {
+            // Menampilkan notifikasi jika sukses
+            const notification = document.getElementById("notification");
+            notification.style.display = "block";
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 2000); // Menyembunyikan notifikasi setelah 2 detik
+        })
+        .catch(err => {
+            console.error("Gagal menyalin teks ke clipboard: ", err);
+    });
+}
