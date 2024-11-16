@@ -30,7 +30,7 @@ window.addEventListener('scroll',showanm);
 
 showanm();
 function showanm() {
-    const trigger = window.innerHeight / 5 * 4;
+    const trigger = window.innerHeight / 100 * 95;
 
     anm.forEach((a) => {
         const boxTop = a.getBoundingClientRect().top;
@@ -133,3 +133,40 @@ function salinbca() {
             console.error("Gagal menyalin teks ke clipboard: ", err);
     });
 }
+
+/**
+ * ========================================
+ *            Komentar orang-orang
+ * ========================================
+ */
+window.addEventListener("DOMContentLoaded", async function () {
+    const listKomentar = document.querySelector('.tempat-komentar');
+
+    function formatTanggal(tanggal) {
+        const date = new Date(tanggal);
+        return new Intl.DateTimeFormat("id-ID", {
+            year: "numeric", month: "long", day: "numeric"
+        }).format(date);
+    }
+
+    /* ! IMPORTANT, CHANGE URL TO YOUR OWN DB ! */
+    const commentsFetch = await fetch("http://localhost:3000/api/comment?appId=67377fed2b3d1e1c31024bf1", {
+        method: "GET",
+        headers: {
+            "Accept": "application/json"
+        }
+    });
+    const comments = await commentsFetch.json();
+
+    for (let komen of comments) {
+        const div = document.createElement("div");
+        div.classList.add("komentar");
+        div.innerHTML = `
+            <h6 class="komentar__header" name="guestName">${komen.name}</h6>
+            <p class="komentar__isi" name="comment">${komen.comment}</p>
+            <p class="komentar__footer" name="footer"><small>${formatTanggal(komen.date)} | ${komen.present ? "Hadir" : "Tidak hadir"}</small></p>
+            `;
+
+        listKomentar.appendChild(div);
+    }
+});

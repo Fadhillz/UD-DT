@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UDDT</title>
-    <link rel="stylesheet" href="styles.css" />
     <!-- simplyCountdown -->
     <link rel="stylesheet" href="coutdown/simplyCountdown.theme.default.css" />
     <script src="coutdown/simplyCountdown.min.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css" />
     <!-- lightbox -->
     <link rel="stylesheet" href="lightbox/css/lightbox.min.css" />
     <script src="lightbox/js/lightbox-plus-jquery.min.js"></script>
@@ -209,20 +210,13 @@
     <section class="RSVP" id="RSVP">
       <div class="row">
         <object data="assets/svg/ungkapan.svg" type="image/svg+xml" id="ungkapan"></object>
-        <form
-          class="konfir"
-          method="POST"
-        >
+        <!-- ! IMPORTANT, CHANGE URL TO YOUR OWN DB ! -->
+        <form class="konfir" method="POST" action="http://localhost:3000/api/comment">
+          <input type="text" name="secretKey" value="67377fed2b3d1e1c31024bf1" hidden />
           <div class="konfir-nama">
-            <input
-              type="text"
-              class="konfir-form"
-              id="nama"
-              name="Nuama"
-              required
-            />
+            <input type="text" class="konfir-form" id="nama" name="guestName" placeholder="Nama Anda" maxlength="50" required />
           </div>
-          
+  
           <div class="konfir-hadir">
             <select name="status" id="hadir" class="konfir-form" required>
               <option disabled selected>Pilih salah satu</option>
@@ -230,19 +224,20 @@
               <option value="tidak-hadir">Saya Tidak Hadir</option>
             </select>
           </div>
-
+  
           <div class="konfir-komen">
-            <input
-              type="text"
-              class="konfir-form"
-              id="komentar"
-              name="komentar"
-              required
-            />
+            <textarea class="konfir-form" name="comment" id="komentar" placeholder="Pesan untuk pengantin" required></textarea>
+            <!-- <input
+                type="text"
+                class="konfir-form"
+                id="komentar"
+                name="komentar"
+                required
+              /> -->
           </div>
-
+  
           <div class="konfir-kirim">
-            <button>Kirim</button>
+            <button type="submit">Kirim</button>
           </div>
         </form>
         <div class="tempat-komentar">

@@ -16,141 +16,6 @@ body {
 }
 
 
-/* Media Query 768px (tablet) */
-@media (max-width: 768px) {
-  /* CSS untuk tablet dan smartphone landscape */
-
-  .core .row #kertas1, .core .row #kertas2 {
-    width: 85%;
-  }
-
-  .core .row #tombol {
-    width: 68%;
-  }
-
-  .core .row #textTamu {
-    width: 65%;
-  }
-
-  .core .row #textJudul {
-    width: 45%;
-  }
-
-  .core .row .slamet #sugengrawuh {
-    width: 74%;
-  }
-
-  .core .row .slamet #aksen1 {
-    height: 50%;
-  }
-
-  .couple .row #fotoTitania, .couple .row #fotoNando {
-    width: 40%;
-    padding: 2% 0
-  }
-
-  .couple .row #kalpembuka {
-    font-size: 20px;
-  }
-
-  .akad .row .page1, .akad .row .page2, .akad .row .page3, .akad .row .countdown {
-    width: 82%;
-  }
-
-  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
-    font-size: 40px;
-    width: 126px;
-  }
-
-  .simply-countdown>.simply-section {
-    height: 85px;
-  }
-
-  .akad .row .page3 .info .aksen {
-    flex: 7%;
-  }
-
-  .akad .row .page3 .info .aksen .baris1 .gambar {
-    width: 50%;
-  }
-
-  .akad .row .page3 .info .aksen .baris1 p , .akad .row .page3 .info .aksen p{
-    font-size: 11px;
-  }
-
-  .akad .row .page2 .info .waktu h3, .akad .row .page3 .info .resepsi .waktu h3 {
-    font-size: 286%;
-  }
-
-  .akad .row .page2 .info .waktu h4, .akad .row .page3 .info .resepsi .waktu h4 {
-    font-size: 155%;
-  }
-
-  .akad .row .page2 .info .waktu p, .akad .row .page3 .info .resepsi .waktu p {
-    font-size: 90%;
-  }
-
-  .akad .row .page2 .info .waktu button, .akad .row .page3 .info .resepsi .waktu button,
-  .akad .row .page3 .info .aksen h5 {
-    font-size: 21px;
-  }
-
-  .akad .row .page3 .penutup p {
-    font-size: 14px;
-  }
-
-  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
-    font-size: 45px;
-    width: 135px;
-  }
-
-  .simply-countdown>.simply-section {
-    height: 100px;
-  }
-
-  .story .row .wed .hadiah p {
-    font-size: 20px;
-  }
-
-  .story .row .wed .foto::after {
-    width: 166%;
-    height: 91%;
-  }
-
-  .story .row .wed .hadiah .alamat h5 {
-    font-size: 19px;
-  }
-
-  .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
-    font-size: 60%;
-  }
-
-  .story .row .wed .hadiah .atmtitan #noT h2, .story .row .wed .hadiah .atmnando #noN h2 {
-    font-size: 150%;
-  }
-
-  .story .row .wed .hadiah .atmtitan #noT button, .story .row .wed .hadiah .atmnando #noN button {
-    font-size: 95%;
-  }
-
-  .RSVP .row .konfir-form {
-    height: 100%;
-  }
-
-  .RSVP .row .konfir-kirim {
-    width: 98%;
-    height: 17%;
-  }
-
-  .gift .row #penutup {
-    padding: 20% 0 51%;
-  }
-
-  .gift .row #layerb {
-    width: 85%;
-  }
-
-}
 
 /* Loading Section */
 .loading {
@@ -181,6 +46,7 @@ body {
 
 /* core-section */
 .core {
+  overflow: hidden;
   display: flex;
   position: fixed;
   width: 100vw;
@@ -370,7 +236,7 @@ body {
   display: flex;
   position: absolute;
   width: 75%;
-  z-index: 2;
+  z-index: 5;
   transform: translateY(284%);
   justify-content: center;
   align-items: center;
@@ -1012,16 +878,6 @@ body {
   justify-content: center;
 }
 
-.quote::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 12%;
-  top: -1px;
-  background-image: linear-gradient(180deg, var(--htm), transparent);
-}
-
 .quote .row {
   display: flex;
   flex-direction: column;
@@ -1367,12 +1223,20 @@ body {
   width: 95%;
   height: 90%;
   border: 1px solid;
-  color: var(
-  --pth);
+  color: var(--pth);
+  font-family: 'Bodoni Moda';
+  /* make un-resizeable */
+  resize: none;
+}
+
+/* for placeholder */
+.konfir-form::placeholder {
+  opacity: 0.5;
+  color: var(--pth);
   font-family: 'Bodoni Moda';
   text-align: center;
-  align-items: center;
 }
+
 .RSVP .row button {
   width: 100%;
   background-color: var(--pth);
@@ -1387,14 +1251,6 @@ body {
   margin-top: 10%;
   justify-content: center;
   background-color: darkgray;
-}
-
-
-
-#data-tbody {
-  display: flex;
-  width: 100%;
-  background-color: white;
 }
 
 /* Gift-section */
@@ -1600,5 +1456,576 @@ footer .row a {
   .story .row .wed .foto #frame {
     transform: translateX(-23px);
   }
+
+}
+
+
+/* Media Query 768px (tablet) */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* CSS untuk tablet dan smartphone landscape */
+
+  .core .row #kertas1, .core .row #kertas2 {
+    width: 85%;
+  }
+
+  .core .row #tombol {
+    width: 68%;
+  }
+
+  .core .row #textTamu {
+    width: 65%;
+  }
+
+  .core .row #textJudul {
+    width: 45%;
+  }
+
+  .core .row .slamet #sugengrawuh {
+    width: 74%;
+  }
+
+  .core .row .slamet #aksen1 {
+    height: 50%;
+  }
+
+  .couple .row #fotoTitania, .couple .row #fotoNando {
+    width: 40%;
+    padding: 2% 0
+  }
+
+  .couple .row #kalpembuka {
+    font-size: 20px;
+  }
+
+  .akad .row .page1, .akad .row .page2, .akad .row .page3, .akad .row .countdown {
+    width: 82%;
+  }
+
+  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
+    font-size: 40px;
+    width: 126px;
+  }
+
+  .simply-countdown>.simply-section {
+    height: 85px;
+  }
+
+  .akad .row .page3 .info .aksen {
+    flex: 7%;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 .gambar {
+    width: 50%;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 p , .akad .row .page3 .info .aksen p{
+    font-size: 11px;
+  }
+
+  .akad .row .page2 .info .waktu h3, .akad .row .page3 .info .resepsi .waktu h3 {
+    font-size: 286%;
+  }
+
+  .akad .row .page2 .info .waktu h4, .akad .row .page3 .info .resepsi .waktu h4 {
+    font-size: 155%;
+  }
+
+  .akad .row .page2 .info .waktu p, .akad .row .page3 .info .resepsi .waktu p {
+    font-size: 90%;
+  }
+
+  .akad .row .page2 .info .waktu button, .akad .row .page3 .info .resepsi .waktu button,
+  .akad .row .page3 .info .aksen h5 {
+    font-size: 21px;
+  }
+
+  .akad .row .page3 .penutup p {
+    font-size: 14px;
+  }
+
+  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
+    font-size: 45px;
+    width: 135px;
+  }
+
+  .simply-countdown>.simply-section {
+    height: 100px;
+  }
+
+  .story .row .wed .hadiah p {
+    font-size: 20px;
+  }
+
+  .story .row .wed .foto::after {
+    width: 166%;
+    height: 91%;
+  }
+
+  .story .row .wed .hadiah .alamat h5 {
+    font-size: 19px;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
+    font-size: 60%;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h2, .story .row .wed .hadiah .atmnando #noN h2 {
+    font-size: 150%;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT button, .story .row .wed .hadiah .atmnando #noN button {
+    font-size: 95%;
+  }
+
+  .RSVP .row .konfir-form {
+    height: 100%;
+  }
+
+  .RSVP .row .konfir-kirim {
+    width: 98%;
+    height: 17%;
+  }
+
+  .gift .row #penutup {
+    padding: 20% 0 51%;
+  }
+
+  .gift .row #layerb {
+    width: 85%;
+  }
+
+}
+
+
+/* ukuran 1024 atau udah mulai masuk laptop ! ini udah mulai di rotate */
+@media (min-width: 769px) {
+
+  .core .row #lineart {
+    bottom: -55%;
+  }
+
+  .core .row #kertas1, .core .row #kertas2 {
+    width: 50%;
+    rotate: 90deg;
+  }
+
+  .core .row #textTamu {
+    width: 30%;
+  }
+
+  .core .row #tombol {
+    width: 40%;
+    transform: translateY(247%);
+  }
+
+  .core .row #textJudul {
+    width: 18%;
+  }
+
+  @keyframes judulm {
+    0% {
+      transform: translate(205%, -100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(205%, -145%);
+      opacity: 1;
+    }
+  }
+
+  .core .row .tamu {
+    font-size: 3.5vw;
+    transform: translateY(233%);
+  }
+
+  .core .row #tekanTombol {
+    font-size: 4vw;
+    transform: translateY(380%);
+  }
+
+  .core .row .slamet #sugengrawuh {
+    width: 37%;
+  }
+
+  .core .row .slamet #aksen1 {
+    height: 50%;
+  }
+  
+  .core .titandannando #textwedding1 {
+    padding: 5%;
+  }
+
+  .core .titandannando #textpengantin1 {
+    padding-top: 9%;
+  }
+  
+  .core .titandannando #tanggal1 {
+    padding-top: 16%;
+  }
+
+  .core .titandannando #scroll-btn {
+    bottom: 2.25em;
+  }
+
+  .quote .row #tnl {
+    max-width: 11%;
+    padding: 6% 0% 3% 72%;
+  }
+
+  .quote .row .kata {
+    padding: 3% 0;
+  }
+
+  .quote .row #ucpan {
+    padding: 0;
+    font-size: 37px;
+    line-height: 40px;
+  }
+
+  .couple .row #kalpembuka {
+    font-size: 23px;
+  }
+
+  .couple .row #fotoTitania, .couple .row #fotoNando {
+    width: 23%;
+    padding: 0;
+  }
+
+  .couple .row #namaTitan, .couple .row #namaNando {
+    width: 50%;
+    padding: 3% 0 1%;
+  }
+
+  .couple .row #igTitan, .couple .row #igNando {
+    width: 25%;
+    padding: 0% 0 10% 0;
+  }
+
+  .akad .row .page1 .judul {
+    padding: 9% 0 3%; 
+  }
+
+  .akad .row .page1 .bar .tg, .akad .row .page1 .bar .wk {
+    height: 80%;
+  }
+
+  .akad .row .page1 p.paragraf {
+    font-size: 105%;
+  }
+
+  .akad .row .page2 .judul h1 {
+    font-size: 95px;
+    font-weight: 900;
+    letter-spacing: 19px;
+  }
+
+  .akad .row .page2 .info .waktu h3, .akad .row .page3 .info .resepsi .waktu h3 {
+    font-size: 300%;
+    letter-spacing: 10px;
+  }
+
+  .akad .row .page2 .info .waktu h4, .akad .row .page3 .info .resepsi .waktu h4 {
+    font-size: 250%;
+  }
+
+  .akad .row .page2 .info .waktu .pukul h5, .akad .row .page3 .info .resepsi .waktu .pukul h5 {
+    font-size: 30px;
+  }
+  
+  .akad .row .page2 .info .waktu p, .akad .row .page3 .info .resepsi .waktu p {
+    font-size: 125%;
+  }
+
+  .akad .row .page2 .info .waktu button, .akad .row .page3 .info .resepsi .waktu button {
+    font-size: 25px;
+    padding: 3% 0;
+    margin: 5% 0;
+  }
+
+  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
+    font-size: 70px;
+    width: 215px;
+  }
+
+  .simply-countdown>.simply-section .simply-word {
+    font-size: 25px;
+  }
+
+  .simply-countdown>.simply-section {
+    height: 135%;
+  }
+
+  .akad .row .page3 .info .resepsi h2 {
+    font-size: 100px;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 .gambar {
+    width: 48%;
+  }
+
+  .akad .row .page3 .info .aksen {
+    flex: 15%;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 p {
+    font-size: 18px;
+  }
+
+  .akad .row .page3 .info .aksen p {
+    font-size: 13px;
+  }
+
+  .akad .row .page3 .info .aksen h5 {
+    font-size: 30px;
+  }
+
+  .akad .row .page3 .penutup {
+    padding: 2% 0 5%;
+  }
+
+  .akad .row .page3 .penutup p {
+    font-size: 20px;
+  }
+
+  .akad .row{
+    padding: 30% 0 10%;
+  }
+
+  .story .row .wed {
+    padding: 10% 0 5%;
+  }
+
+  .story .row .wed .hadiah p {
+    font-size: 21px;
+    line-height: 115%;
+  }
+
+  .story .row .wed .hadiah .alamat #hd {
+    width: 55%;
+  }
+  
+  .story .row .wed .hadiah .alamat h5 {
+    font-size: 23px;
+    letter-spacing: 1px;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
+    font-size: 23px;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h2, .story .row .wed .hadiah .atmnando #noN h2 {
+    font-size: 35px;
+    letter-spacing: 7px;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT button, .story .row .wed .hadiah .atmnando #noN button {
+    font-size: 27px;
+  }
+
+  .story .row #line{
+    width: 20%;
+  }
+
+  .story .row #giftf {
+    width: 32%;
+    padding: 3% 12% 2%;
+  }
+
+  .RSVP .row #ungkapan {
+    margin-top: 0%;
+    margin-bottom: 2%;
+    width: 20%;
+  }
+
+  .RSVP .row form {
+    padding: 2% 0%;
+    height: 45%;
+  }
+
+  .RSVP .row .tempat-komentar{
+    margin-top: 1%;
+    height: 35%;
+  }
+
+  footer {
+    padding-top: 150vh;
+  }
+
+  .gift {
+    height: 100vh;
+  }
+
+  .gift .row #penutup {
+    width:25%;
+    padding: 15% 0 35%;
+  }
+
+
+  .gift .row #layerb {
+    transform: translateY(70%);
+  }
+
+  .gift .row #layerb.anm.show {
+    transform: translateY(10%);
+  }
+
+  @keyframes naikturunbunga {
+    0% {
+      transform: translateY(10%);
+    }
+    25% {
+      transform: translateY(15%);
+    }
+    75% {
+      transform: translateY(33%);
+    }
+    100% {
+      transform: translateY(13%);
+    }
+  }
+
+  footer .row h3 {
+    font-size: 15px;
+  }
+
+}
+
+/* media query untuk diatas dari 2024 */
+
+@media (min-width: 1025px) {
+
+  .core .row #textJudul {
+    width: 21%;
+  }
+
+  @keyframes judulm {
+    0% {
+      transform: translate(165%, -950%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(165%, -115%);
+      opacity: 1;
+    }
+  }
+
+  .core .titandannando #textwedding1 {
+    padding: 4%;
+  }
+
+  .quote .row #tnl {
+    max-width: 9%;
+    padding: 4% 0% 2% 72%;
+  }
+
+  .quote .row .kata #stampel {
+    max-width: 70%;
+  }
+
+  .couple .row #kalpembuka {
+    font-size: 29px;
+  }
+
+  .couple .row #fotoTitania, .couple .row #fotoNando {
+    width: 20%;
+  }
+
+  .couple .row #namaTitan, .couple .row #namaNando {
+    width: 45%;
+  }
+
+  .couple .row #igTitan, .couple .row #igNando {
+    width: 21%;
+  }
+
+  .akad .row .page1 .bar .tg, .akad .row .page1 .bar .wk {
+    height: 110%;
+  }
+
+  .akad .row .page1 p.paragraf {
+    font-size: 24px;
+  }
+
+  .akad .row .page2 .judul h1 {
+    font-size: 145px;
+    margin: 1% 0;
+  }
+
+  .akad .row .page2 .info .waktu h3, .akad .row .page3 .info .resepsi .waktu h3 {
+    font-size: 100px;
+    letter-spacing: 15px;
+  }
+
+  .akad .row .page2 .info .waktu h4, .akad .row .page3 .info .resepsi .waktu h4 {
+    font-size: 55px;
+  }
+
+  .akad .row .page2 .info .waktu p, .akad .row .page3 .info .resepsi .waktu p {
+    font-size: 33px;
+  }
+  
+  .akad .row .page2 .info .waktu button, .akad .row .page3 .info .resepsi .waktu button {
+    font-size: 33px;
+  }
+
+  .simply-countdown>.simply-section .simply-amount, .simply-countdown>.simply-section .simply-word {
+    font-size: 95px;
+    width: 310px;
+  }
+  
+  .simply-countdown>.simply-section .simply-word {
+    font-size: 39px;
+  }
+
+  .akad .row .page3 .info .aksen .baris1 p {
+    font-size: 27px;
+    }
+  
+  .akad .row .page3 .info .aksen p {
+    font-size: 22px;
+  }
+
+  .akad .row .page3 .info .aksen h5 {
+    font-size: 40px;
+  }
+
+  .akad .row .page3 .info .resepsi h2 {
+    font-size: 105px;
+    letter-spacing: 20px;
+  }
+
+  .akad .row .page3 .penutup p {
+    font-size: 23px;
+  }
+
+  .story .row .wed .hadiah .alamat h5 {
+    font-size: 27px;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
+    font-size: 33px;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT h2, .story .row .wed .hadiah .atmnando #noN h2 {
+    font-size: 42px;
+    letter-spacing: 13px;
+  }
+
+  .story .row .wed .hadiah .atmtitan #noT button, .story .row .wed .hadiah .atmnando #noN button {
+    font-size: 35px;
+  }
+
+  .story .row .wed .foto::after {
+    width: 174%;
+    height: 89%;
+  }
+
+
+
+
+
+
+
+
 
 }
