@@ -138,16 +138,14 @@ window.addEventListener("DOMContentLoaded", async function () {
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
-        const name = form.querySelector('input[name="guestName"]').value;
-        const comment = form.querySelector('textarea[name="comment"]').value;
+        const name = form.querySelector('input[name="guestName"]');
+        const comment = form.querySelector('textarea[name="comment"]');
         const present = form.querySelector('select[name="status"]');
-
-        console.log(name, comment, present.value);
 
         const data = {
             secretKey,
-            guestName: name,
-            comment: comment,
+            guestName: name.value,
+            comment: comment.value,
             status: present.value
         };
 
@@ -163,6 +161,10 @@ window.addEventListener("DOMContentLoaded", async function () {
         if (response !== 201 || responseJson.error) {
             /* handle error here */
         }
+
+        /* Reset form input value */
+        name.value = "";
+        comment.value = "";
 
         /* Alert? */
         // code here
