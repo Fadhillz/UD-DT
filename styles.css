@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: visible;
+  overflow-x: hidden;
   background-color: var(--htm);
 }
 
