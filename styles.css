@@ -16,6 +16,17 @@ body {
 }
 
 
+#pause-btn {
+  display: flex;
+  scale: 0.3;
+  position: fixed;
+  z-index: 999;
+  bottom: -40px;
+  right: -40px;
+  opacity: 0;
+  transition: 10s ease;
+}
+
 
 /* Loading Section */
 .loading {
@@ -1038,8 +1049,17 @@ body {
   height: 89%;
   background-image: url(./assets/img/couple.jpg);
   background-size: cover;
-  background-position: -110px;
+  animation: animasi-bg-foto 5s ease-in-out infinite alternate-reverse;
 }
+
+@keyframes animasi-bg-foto {
+  from {
+    background-position: -60%;
+  } to {
+    background-position: 100%;
+  }
+}
+
 .story .row .wed .hadiah {
   display: flex;
   justify-content: center;
@@ -1464,6 +1484,12 @@ footer .row a {
 @media (min-width: 481px) and (max-width: 768px) {
   /* CSS untuk tablet dan smartphone landscape */
 
+  #pause-btn {
+    scale: 0.45;
+    bottom: -10px;
+    right: -10px;
+  }
+
   .core .row #kertas1, .core .row #kertas2 {
     width: 85%;
   }
@@ -1557,7 +1583,7 @@ footer .row a {
   }
 
   .story .row .wed .foto::after {
-    width: 166%;
+    width: 195%;
     height: 91%;
   }
 
@@ -1599,6 +1625,11 @@ footer .row a {
 
 /* ukuran 1024 atau udah mulai masuk laptop ! ini udah mulai di rotate */
 @media (min-width: 769px) {
+  #pause-btn {
+    scale: 0.5;
+    bottom: 0;
+    right: 0;
+  }
 
   .core .row #lineart {
     bottom: -55%;
@@ -1891,8 +1922,13 @@ footer .row a {
 }
 
 /* media query untuk diatas dari 2024 */
-
 @media (min-width: 1025px) {
+
+  #pause-btn {
+    scale: 0.6;
+    bottom: 0;
+    right: 0;
+  }
 
   .core .row #textJudul {
     width: 21%;
@@ -2020,12 +2056,15 @@ footer .row a {
     height: 89%;
   }
 
+}
 
+/* more than */
+@media (min-width: 1441px) {
 
-
-
-
-
+  .story .row .wed .foto::after {
+    width: 160%;
+    height: 89%;
+  }
 
 
 }

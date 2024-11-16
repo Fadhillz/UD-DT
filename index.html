@@ -57,6 +57,9 @@
     </section>
     <!-- endCoreSection -->
 
+    <!-- tombol pause -->
+    <img src="assets/aud/pause.png" id="pause-btn" class="anm">
+
     <!-- quoteSection -->
     <section class="quote" id="quote">
       <div class="row">
@@ -211,8 +214,7 @@
       <div class="row">
         <object data="assets/svg/ungkapan.svg" type="image/svg+xml" id="ungkapan"></object>
         <!-- ! IMPORTANT, CHANGE URL TO YOUR OWN DB ! -->
-        <form class="konfir" method="POST" action="http://localhost:3000/api/comment">
-          <input type="text" name="secretKey" value="67377fed2b3d1e1c31024bf1" hidden />
+        <form class="konfir" method="POST">
           <div class="konfir-nama">
             <input type="text" class="konfir-form" id="nama" name="guestName" placeholder="Nama Anda" maxlength="50" required />
           </div>
@@ -267,6 +269,9 @@
         <h3>2024 </h3>
       </div>
     </footer>
+
+    <audio id="audio1" src="assets/aud/welcome.mp3"></audio>
+    <audio id="audio2" src="assets/aud/The Beauty of His Destiny.mp3" loop></audio> 
 
     <!-- js -->
     <script src="scripts.js"></script>
