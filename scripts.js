@@ -82,12 +82,15 @@ simplyCountdown('.simply-countdown', {
 
 /**
  * ========================================
- *            Komentar orang-orang
+ *            Handle for Comments
  * ========================================
  */
 window.addEventListener("DOMContentLoaded", async function () {
+    const secretKey = "67377fed2b3d1e1c31024bf1";
     const listKomentar = document.querySelector('.tempat-komentar');
+    const form = document.querySelector('.konfir');
 
+    /* Format date to DD MMMM YYYY */
     function formatTanggal(tanggal) {
         const date = new Date(tanggal);
         return new Intl.DateTimeFormat("id-ID", {
@@ -95,29 +98,74 @@ window.addEventListener("DOMContentLoaded", async function () {
         }).format(date);
     }
 
-    /* ! IMPORTANT, CHANGE URL TO YOUR OWN DB ! */
-    const commentsFetch = await fetch("http://localhost:3000/api/comment?appId=67377fed2b3d1e1c31024bf1", {
-        method: "GET",
-        headers: {
-            "Accept": "application/json"
+    async function loadComments() {
+        /* Check if parent element has a child */
+        if (listKomentar.hasChildNodes()) {
+            listKomentar.innerHTML = "";
         }
-    });
-    const comments = await commentsFetch.json();
 
-    if (!comments.length) {
-        const div = document.createElement("div");
-        div.classList.add("komentar-empty");
-        div.innerHTML = "<p class='komentar__empty'>Belum ada komentar</p>";
-    }
+        /* ! IMPORTANT, CHANGE URL TO YOUR OWN DB ! */
+        const commentsFetch = await fetch(`http://localhost:3000/api/comment?appId=${secretKey}`, {
+            method: "GET",
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+        const comments = await commentsFetch.json();
 
-    for (let komen of comments) {
-        const div = document.createElement("div");
-        div.classList.add("komentar");
-        div.innerHTML = `
+        if (!comments.length) {
+            const div = document.createElement("div");
+            div.classList.add("komentar-empty");
+            div.innerHTML = "<p class='komentar__empty'>Belum ada komentar</p>";
+            listKomentar.appendChild(div);
+        }
+
+        for (let komen of comments) {
+            const div = document.createElement("div");
+            div.classList.add("komentar");
+            div.innerHTML = `
             <h6 class="komentar__header" name="guestName">${komen.name}</h6>
             <p class="komentar__isi" name="comment">${komen.comment}</p>
             <p class="komentar__footer" name="footer"><small>${formatTanggal(komen.date)} | ${komen.present ? "Hadir" : "Tidak hadir"}</small></p>`;
 
-        listKomentar.appendChild(div);
+            listKomentar.appendChild(div);
+        }
     }
+    // trigger
+    loadComments();
+
+    /* submit form */
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const name = form.querySelector('input[name="guestName"]').value;
+        const comment = form.querySelector('textarea[name="comment"]').value;
+        const present = form.querySelector('select[name="status"]');
+
+        console.log(name, comment, present.value);
+
+        const data = {
+            secretKey,
+            guestName: name,
+            comment: comment,
+            status: present.value
+        };
+
+        const response = await fetch("http://localhost:3000/api/comment", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const responseJson = await response.json();
+        if (response !== 201 || responseJson.error) {
+            /* handle error here */
+        }
+
+        /* Alert? */
+        // code here
+        loadComments();
+    });
 });
