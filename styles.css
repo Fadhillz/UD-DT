@@ -1297,6 +1297,11 @@ body {
   align-items: center;
 }
 
+.tempat-komentar::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
 .RSVP .row .tempat-komentar .komentar {
   display: flex;
   padding: 3% 0;
