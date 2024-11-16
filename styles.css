@@ -24,7 +24,24 @@ body {
   bottom: -40px;
   right: -40px;
   opacity: 0;
-  transition: 10s ease;
+  transition: 3s ease;
+  rotate: 0deg;
+}
+
+/* Tambahkan animasi rotasi */
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+
+/* Class untuk mengaktifkan rotasi */
+.rotating {
+  animation: rotate 10s linear infinite;
 }
 
 
@@ -1246,7 +1263,9 @@ body {
   color: var(--pth);
   font-family: 'Bodoni Moda';
   /* make un-resizeable */
+  font-size: 15px;
   resize: none;
+  text-align: center;
 }
 
 /* for placeholder */
@@ -1261,16 +1280,67 @@ body {
   width: 100%;
   background-color: var(--pth);
   border: transparent;
+  font-size: 14px;
+  font-family: 'Bodoni Moda';
 }
 
 
 .RSVP .row .tempat-komentar {
   width: 100%;
   height: 54%;
+  overflow: scroll;
   display: flex;
   margin-top: 10%;
+  justify-content: flex-start;
+  background-color: var(--gradient);
+  flex-direction: column;
+  align-items: center;
+}
+
+.RSVP .row .tempat-komentar .komentar {
+  display: flex;
+  padding: 3% 0;
+  margin: 1% 0;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background-color: darkgray;
+  border-bottom: 1px solid var(--pth);
+  border-top: 1px solid var(--pth);
+}
+
+.RSVP .row .tempat-komentar .komentar .komentar__header {
+  display: flex;
+  width: 70%;
+  font-family: 'Bodoni Moda';
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--coklat);
+  background-color: var(--pth);
+  padding: 1%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.RSVP .row .tempat-komentar .komentar .komentar__isi {
+  display: flex;
+  color: var(--pth);
+  font-family: 'Bodoni Moda';
+  margin: 0;
+  font-size: 15px;
+}
+
+.RSVP .row .tempat-komentar .komentar .komentar__footer {
+  display: flex;
+  color: var(--pth);
+  font-family: 'Bodoni Moda';
+  margin: 0;
+}
+
+.RSVP .row .tempat-komentar .komentar .komentar__footer small {
+  font-size: 5px;
 }
 
 /* Gift-section */
@@ -1484,6 +1554,22 @@ footer .row a {
 @media (min-width: 481px) and (max-width: 768px) {
   /* CSS untuk tablet dan smartphone landscape */
 
+  footer {
+    padding-top: 40vh;
+  }
+
+  .RSVP .row .tempat-komentar .komentar .komentar__header{
+    font-size: 25px;
+  }
+
+  .RSVP .row .tempat-komentar .komentar .komentar__isi {
+    font-size: 30px;
+  }
+
+  .RSVP .row .tempat-komentar .komentar .komentar__footer small {
+    font-size: 10px;
+  }
+
   #pause-btn {
     scale: 0.45;
     bottom: -10px;
@@ -1625,6 +1711,20 @@ footer .row a {
 
 /* ukuran 1024 atau udah mulai masuk laptop ! ini udah mulai di rotate */
 @media (min-width: 769px) {
+
+  .RSVP .row .tempat-komentar .komentar .komentar__header{
+    font-size: 30px;
+  }
+
+  .RSVP .row .tempat-komentar .komentar .komentar__isi {
+    font-size: 35px;
+  }
+
+  .RSVP .row .tempat-komentar .komentar .komentar__footer small {
+    font-size: 15px;
+  }
+
+
   #pause-btn {
     scale: 0.5;
     bottom: 0;
@@ -1924,6 +2024,18 @@ footer .row a {
 /* media query untuk diatas dari 2024 */
 @media (min-width: 1025px) {
 
+  .RSVP .row .tempat-komentar .komentar .komentar__header{
+    font-size: 35px;
+  }
+
+  .RSVP .row .tempat-komentar .komentar .komentar__isi {
+    font-size: 40px;
+  }
+
+  .RSVP .row .tempat-komentar .komentar .komentar__footer small {
+    font-size: 20px;
+  }
+
   #pause-btn {
     scale: 0.6;
     bottom: 0;
@@ -2065,6 +2177,4 @@ footer .row a {
     width: 160%;
     height: 89%;
   }
-
-
 }
