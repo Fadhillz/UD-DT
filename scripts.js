@@ -29,7 +29,7 @@ function applyIphoneStyles() {
         // Remove notification after 2 seconds
         setTimeout(() => {
             notification.remove();
-        }, 2000);
+        }, 5000);
     }
 }
 
