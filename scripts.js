@@ -1,3 +1,41 @@
+// Function to detect if the user is on an iPhone
+function isIphone() {
+    return /iPhone|iPad|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+// Function to apply CSS changes and show notification if on iPhone
+function applyIphoneStyles() {
+    if (isIphone()) {
+        // Hide elements with the class 'noniphone'
+        const iphoneConfig = document.querySelectorAll('.noniphone');
+        iphoneConfig.forEach(iphone => {
+            iphone.style.display = 'none';
+        });
+
+        // Create and show notification
+        const notification = document.createElement('div');
+        notification.textContent = "You are using Safari. Some features may not work optimally. We apologize for the inconvenience.";
+        notification.style.position = 'fixed';
+        notification.style.top = '10px';
+        notification.style.left = '50%';
+        notification.style.transform = 'translateX(-50%)';
+        notification.style.backgroundColor = '#ffcc00';
+        notification.style.padding = '10px';
+        notification.style.borderRadius = '5px';
+        notification.style.zIndex = '1000';
+        notification.style.color = '#000';
+        document.body.appendChild(notification);
+
+        // Remove notification after 2 seconds
+        setTimeout(() => {
+            notification.remove();
+        }, 2000);
+    }
+}
+
+// Run the function on page load
+window.onload = applyIphoneStyles;
+
 
 // membuat onloading
 window.addEventListener('load', function() {
