@@ -1,9 +1,17 @@
-// Function to detect Safari browser
+// Function to detect if the browser is Safari
 function isSafari() {
-    var ua = navigator.userAgent.toLowerCase(); 
-    return ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1;
-}
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
 
+    // Check for Safari on iOS by verifying it is not Chrome or Firefox, and using WebKit engine
+    var isSafariBrowser = /^((?!chrome|android).)*safari/i.test(ua);
+    var isWebKit = !!window.webkit;
+
+    // Additional check for iOS Safari
+    var isIOS = /iPad|iPhone|iPod/.test(navigator.platform) || 
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+                
+    return isSafariBrowser && isWebKit && isIOS;
+}
 // Function to display notification and link to open in Chrome
 function notifySafariUser() {
     if (isSafari()) {
