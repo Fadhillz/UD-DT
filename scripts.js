@@ -1,3 +1,42 @@
+// Function to detect Safari browser
+function isSafari() {
+    var ua = navigator.userAgent.toLowerCase(); 
+    return ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1;
+}
+
+// Function to display notification and link to open in Chrome
+function notifySafariUser() {
+    if (isSafari()) {
+        // Display a custom notification to the user
+        const notification = document.createElement('div');
+        notification.innerHTML = `
+            <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #f3f1e7; padding: 10px; text-align: center; z-index: 1000;">
+                <p>You are using Safari. For a better experience, try opening this page in another browser.</p>
+                <button id="copyLink" style="padding: 5px 10px; background-color: #4285f4; color: #fff; border: none; cursor: pointer;">Copy Link</button>
+            </div>
+        `;
+        document.body.appendChild(notification);
+
+        // Copy link to clipboard
+        document.getElementById('copyLink').addEventListener('click', function() {
+            const linkToCopy = window.location.href;
+            navigator.clipboard.writeText(linkToCopy).then(() => {
+                alert("Link copied! Open Chrome or another browser, and paste the link to open.");
+            }).catch(err => {
+                console.error('Failed to copy link: ', err);
+            });
+        });
+    }
+}
+
+// Call the function on page load
+window.onload = notifySafariUser;
+
+
+
+
+
+
 // membuat onloading
 window.addEventListener('load', function() {
     
@@ -315,38 +354,3 @@ const playButton = document.getElementById("tekanTombol");
         audio2.currentTime = 0;
         isPlaying = false;
     }
-
-// Function to detect Safari browser
-function isSafari() {
-    var ua = navigator.userAgent.toLowerCase(); 
-    return ua.indexOf('safari') !== -1 && ua.indexOf('chrome') === -1;
-}
-
-// Function to display notification and link to open in Chrome
-function notifySafariUser() {
-    if (isSafari()) {
-        // Display a custom notification to the user
-        const notification = document.createElement('div');
-        notification.innerHTML = `
-            <div style="position: fixed; top: 0; left: 0; width: 100%; background-color: #ffcc00; padding: 10px; text-align: center; z-index: 1000;">
-                <p>You are using Safari. For a better experience, open this page in Chrome.</p>
-                <button id="openInChrome" style="padding: 5px 10px; background-color: #4285f4; color: #fff; border: none; cursor: pointer;">Open in Chrome</button>
-            </div>
-        `;
-        document.body.appendChild(notification);
-
-        // Attempt to open the page in Chrome on iOS
-        document.getElementById('openInChrome').addEventListener('click', function() {
-            const chromeUrl = `googlechrome://` + window.location.href.replace(/^https?:\/\//, '');
-            window.location.href = chromeUrl;
-
-            // Optional fallback message if Chrome URL scheme doesn't work
-            setTimeout(() => {
-                alert("It seems Chrome is not installed, or this action is not supported on your device.");
-            }, 2000);
-        });
-    }
-}
-
-// Call the function on page load
-window.onload = notifySafariUser;
