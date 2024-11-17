@@ -1552,6 +1552,22 @@ footer .row a {
     transform: translateX(-23px);
   }
 
+  @media (max-width: 250px) {
+
+    .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
+      text-align: center;
+    }
+
+    .story .row .wed .hadiah {
+      flex: 20%;
+    }
+
+    .story .row .wed .hadiah .atmtitan #mandiri, .story .row .wed .hadiah .atmnando #bca {
+      display: none;
+    }
+    
+  }
+
 }
 
 
@@ -1711,11 +1727,55 @@ footer .row a {
     width: 85%;
   }
 
+
+  @media (max-width: 618px) {
+
+    /* disini */
+    .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
+      text-align: center;
+    }
+
+    .story .row .wed .hadiah {
+      flex: 20%;
+    }
+
+    .story .row .wed .hadiah .atmtitan #mandiri, .story .row .wed .hadiah .atmnando #bca {
+      display: none;
+    }
+
+    .story .row .wed .foto.anm.show {
+      transform: translateX(-66%);
+    }
+
+  }
+
+  @media (max-width: 670px) {
+
+    .story .row .wed .foto.anm.show {
+      transform: translateX(-70%);
+    }
+
+    .story .row .wed .foto::after {
+      width: 225%;
+    }
+
+  }
+
+  @media (max-width: 711px) {
+    .story .row .wed .foto.anm.show {
+      transform: translateX(-70%);
+    }
+  }
+
 }
 
 
 /* ukuran 1024 atau udah mulai masuk laptop ! ini udah mulai di rotate */
 @media (min-width: 769px) {
+
+  @media (max-width: 13) {
+    
+  }
 
   .RSVP .row .tempat-komentar .komentar .komentar__header{
     font-size: 30px;
@@ -1931,6 +1991,14 @@ footer .row a {
     padding: 10% 0 5%;
   }
 
+  .story .row .wed .hadiah {
+    flex: 25%;
+  }
+
+  .story .row .wed .hadiah .atmtitan #mandiri, .story .row .wed .hadiah .atmnando #bca {
+    display: none;
+  }
+
   .story .row .wed .hadiah p {
     font-size: 21px;
     line-height: 115%;
@@ -2025,6 +2093,57 @@ footer .row a {
   }
 
 }
+
+
+@media (min-width: 924px) {
+
+  .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
+    text-align: center;
+  }
+
+  .story .row .wed .hadiah {
+    flex: 20%;
+  }
+
+  .story .row .wed .hadiah .atmtitan #mandiri, .story .row .wed .hadiah .atmnando #bca {
+    display: none;
+  }
+
+  .story .row .wed .foto.anm.show {
+    transform: translateX(-25%);
+  }
+
+  .story .row .wed .foto::after {
+    width: 138%;
+  }
+
+}
+
+@media (min-width: 1020px) {
+
+  .story .row .wed .hadiah .atmtitan #noT h3, .story .row .wed .hadiah .atmnando #noN h3 {
+    text-align: center;
+  }
+
+  .story .row .wed .hadiah {
+    flex: 45%;
+  }
+
+  .story .row .wed .hadiah .atmtitan #mandiri, .story .row .wed .hadiah .atmnando #bca {
+    display: flex;
+  }
+
+  .story .row .wed .foto.anm.show {
+    transform: translateX(-25%);
+  }
+
+  .story .row .wed .foto::after {
+    width: 138%;
+  }
+
+}
+
+
 
 /* media query untuk diatas dari 2024 */
 @media (min-width: 1025px) {
@@ -2169,17 +2288,19 @@ footer .row a {
   }
 
   .story .row .wed .foto::after {
-    width: 174%;
+    width: 127%;
     height: 89%;
   }
 
 }
 
+
+
 /* more than */
 @media (min-width: 1441px) {
 
   .story .row .wed .foto::after {
-    width: 160%;
+    width: 127%;
     height: 89%;
   }
 }
