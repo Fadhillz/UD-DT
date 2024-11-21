@@ -109,7 +109,7 @@ function bukaUndangan () {
 simplyCountdown('.simply-countdown', {
     year: 2024,
     month: 11, 
-    day: 27, 
+    day: 23, 
     words: { 
         days: { singular: 'HARI', plural: 'HARI' },
         hours: { singular: 'JAM', plural: 'JAM' },
